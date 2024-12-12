@@ -392,3 +392,5 @@ PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 export PATH
 # ---- END ----
 # zprof
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
