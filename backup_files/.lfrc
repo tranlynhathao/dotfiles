@@ -1,0 +1,3 @@
+map <Enter> shell xdg-open {}
+shell nvim {}
+

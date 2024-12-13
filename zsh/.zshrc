@@ -343,7 +343,9 @@ esac
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # ---- END ----
 
+# ---- Iterm2 Shell Integration ----
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# ---- END ----
 
 # ---- SONAR ----
 export PATH="$PATH:/Users/tranlynhathao/sonar-scanner-6.2.1.4610-macosx-aarch64/bin"
@@ -391,6 +393,7 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 export PATH
 # ---- END ----
-# zprof
+
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+# zprof
