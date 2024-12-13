@@ -1,0 +1,7 @@
+GPU=1
+CUDNN=1
+OPENCV=1
+AVX=0
+OPENMP=0
+CUDA_PATH?=/usr/local/cuda
+
