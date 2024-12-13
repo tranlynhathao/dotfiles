@@ -388,7 +388,6 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 # ---- END ----
 
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-<<<<<<< HEAD
 
 # ---- wezterm config ----
 PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
