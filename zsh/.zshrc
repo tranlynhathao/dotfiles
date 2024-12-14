@@ -7,7 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # ---- config zshrc faster ----
 alias sz="source ~/.zshrc"
@@ -396,4 +396,26 @@ export PATH
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+export NODE_OPTIONS=--max-old-space-size=4096
+
+# ---- ghcup config ----
+[ -f "/Users/tranlynhathao/.ghcup/env" ] && . "/Users/tranlynhathao/.ghcup/env" # ghcup-env
+export PATH="$HOME/.ghcup/bin:$PATH"
+# ---- END ----
+
+# ---- opam config ----
+export PATH="$HOME/.opam/default/bin:$PATH"
+# ---- END ----
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/tranlynhathao/.opam/opam-init/init.zsh' ]] || source '/Users/tranlynhathao/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+
 # zprof
+
+
