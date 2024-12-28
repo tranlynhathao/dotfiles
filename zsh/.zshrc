@@ -173,6 +173,17 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
+# ------  fzf-git ------
+# CTRL-GCTRL-F for Files
+# CTRL-GCTRL-B for Branches
+# CTRL-GCTRL-T for Tags
+# CTRL-GCTRL-R for Remotes
+# CTRL-GCTRL-H for commit Hashes
+# CTRL-GCTRL-L for reflogs
+# CTRL-GCTRL-S for Stashes
+# CTRL-GCTRL-W for Worktrees
+# CTRL-GCTRL-E for Each ref (git for-each-ref)
+
 source ~/fzf-git.sh/fzf-git.sh
 
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
@@ -253,6 +264,17 @@ cpp() {
     g "$@" -o "$output_file" && ./"$output_file"
 }
 
+c() {
+    if [ "$#" -lt 1 ]; then
+        echo "Usage: c output_file source_file1.c source_file2.c ..."
+        return 1
+    fi
+    output_file="$1"
+    shift
+    gcc-14 "$@" -o "$output_file" && ./"$output_file"
+}
+
+
 mkcd() {
     mkdir -p "$1" && cd "$1"
 }
@@ -286,6 +308,18 @@ unset __conda_setup
 
 LS_COLORS='di=1;34:ln=1;36:so=1;35:pi=1;33:ex=1;32:bd=1;33;40:cd=1;33;40:su=0;41:sg=0;46:tw=1;42:ow=1;34;42:'
 export LS_COLORS
+
+# ---- YAZI ----
+export EDITOR="nvim"
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+# ---- END ----
 
 # ---- RUBY ----
 # source /opt/homebrew/opt/chruby/share/chruby/auto.sh
@@ -369,6 +403,7 @@ export PATH="/opt/homebrew/Cellar/llvm@18/18.1.8/bin:$PATH"
 # export PATH="/opt/homebrew/Cellar/rust/1.81.0_1/lib/rustlib/aarch64-apple-darwin/bin/gcc-ld:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 # ---- END ----
 
 # ---- basher ----

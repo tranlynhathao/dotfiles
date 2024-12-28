@@ -1,58 +1,160 @@
----@type Wezterm
+-- +----------------------------+
+-- | WezTerm Configuration file |
+-- +----------------------------+
+
 local wezterm = require("wezterm")
-local mappings = require("wz-mappings") -- Đảm bảo `wz-mappings` không phụ thuộc vào hệ điều hành
----@type Config
-local cf = wezterm.config_builder()
 
-local config = {
-	color_scheme = "Catppuccin Mocha",
-	font = wezterm.font_with_fallback({ "JetBrainsMono NF", "Hack Nerd Font" }),
-	font_size = 16,
-	line_height = 1.1,
-	window_background_opacity = 0.9,
-	window_padding = {
-		left = "20px",
-	},
-	keys = mappings,
-	disable_default_key_bindings = true,
-	default_domain = "local", -- Dùng "local" thay cho "WSL:Ubuntu"
-	window_decorations = "INTEGRATED_BUTTONS|RESIZE",
-	use_fancy_tab_bar = false,
-	hide_tab_bar_if_only_one_tab = false,
-	launch_menu = {
-		{
-			label = "New Tab - ZSH",
-			args = { "/bin/zsh", "-l" },
-		},
-		{
-			label = "New Tab - Bash",
-			args = { "/bin/bash", "-l" },
-		},
-	},
-	min_scroll_bar_height = "0.5cell",
-	scrollback_lines = 50000,
-}
-
-for k, v in pairs(config) do
-	cf[k] = v
+local status, wezterm = pcall(require, "wezterm")
+if not status then
+	print("Unable to load wezterm module")
 end
 
-wezterm.on("window-focus-changed", function(window)
+local pad = 0
+
+local font_normal = {
+	family = "FiraCode Nerd Font",
+	weight = "Regular",
+	italic = false,
+}
+
+local font_italic = {
+	family = "VictorMono Nerd Font",
+	weight = "DemiBold",
+	italic = true,
+}
+
+local function load_font(font)
+	return wezterm.font(font.family, {
+		weight = font.weight,
+		italic = font.italic,
+	})
+end
+
+wezterm.on("window-focus-changed", function(window, pane)
 	local overrides = window:get_config_overrides() or {}
-
-	if not overrides.colors then
-		overrides.colors = {}
-	end
-
-	if window:is_focused() then
-		overrides.colors.cursor_bg = nil
-	else
-		overrides.colors.cursor_border = "#222222"
-		overrides.colors.cursor_bg = "#222222"
-		overrides.colors.cursor_fg = "#222222"
-	end
-
+	overrides.colors = {
+		background = "rgba(40, 40, 40, 0.9)",
+	}
 	window:set_config_overrides(overrides)
 end)
 
-return cf
+return {
+	-- Window, layout
+	window_padding = {
+		left = pad,
+		right = pad,
+		top = pad,
+		bottom = pad,
+	},
+
+	-- addition
+	-- enable_tab_bar = false,
+	macos_window_background_blur = 20,
+	window_decorations = "RESIZE",
+	window_background_opacity = 0.8,
+
+	-- window_frame = {
+	-- 	active_titlebar_bg = "#3c3836",
+	-- 	inactive_titlebar_bg = "#3c3836",
+	-- },
+
+	-- tab bar transparent
+	window_frame = {
+		active_titlebar_bg = "rgba(40, 40, 40, 0.5)", -- transparent
+		inactive_titlebar_bg = "rgba(40, 40, 40, 0.5)",
+		border_left_width = "4px",
+		border_right_width = "4px",
+		border_bottom_height = "4px",
+		border_top_height = "4px",
+		border_left_color = "#98971a",
+		border_right_color = "#98971a", -- #d3869b
+		border_top_color = "#98971a", -- #fabd2f
+		border_bottom_color = "#98971a", -- #83a598
+	},
+
+	hide_tab_bar_if_only_one_tab = true,
+	enable_wayland = true,
+	initial_cols = 150,
+	initial_rows = 50,
+
+	-- Fonts
+	font = load_font(font_normal),
+	font_size = 18,
+	font_rules = {
+		{
+			italic = true,
+			font = load_font(font_italic),
+		},
+	},
+
+	-- Colors
+	color_scheme = "gruvbox",
+	color_schemes = {
+		gruvbox = {
+			foreground = "#ebdbb2",
+			background = "#282828",
+			cursor_bg = "#928374",
+			cursor_border = "#ebdbb2",
+			cursor_fg = "#282828",
+			selection_bg = "#ebdbb2",
+			selection_fg = "#3c3836",
+
+			ansi = {
+				"#282828", -- black
+				"#cc241d", -- red
+				"#98971a", -- green
+				"#d79921", -- yellow
+				"#458588", -- blue
+				"#b16286", -- purple
+				"#689d6a", -- aqua
+				"#ebdbb2", -- white
+			},
+
+			brights = {
+				"#928374", -- black
+				"#fb4934", -- red
+				"#b8bb26", -- green
+				"#fabd2f", -- yellow
+				"#83a598", -- blue
+				"#d3869b", -- purple
+				"#8ec07c", -- aqua
+				"#fbf1c7", -- white
+			},
+		},
+	},
+
+	-- Keybinds
+	keys = {
+		{
+			key = "h",
+			mods = "CTRL | SHIFT",
+			-- Previous tab
+			action = wezterm.action({ ActivateTabRelative = -1 }),
+		},
+		{
+			key = "l",
+			mods = "CTRL | SHIFT",
+			-- Next tab
+			action = wezterm.action({ ActivateTabRelative = 1 }),
+		},
+		{
+			key = "j",
+			mods = "CTRL | SHIFT",
+			-- Scroll down
+			action = wezterm.action({ ScrollByLine = 1 }),
+		},
+		{
+			key = "k",
+			mods = "CTRL | SHIFT",
+			-- Scroll up
+			action = wezterm.action({ ScrollByLine = -1 }),
+		},
+	},
+
+	-- shell
+	-- default_prog = { "/opt/homebrew/bin/fish" },
+
+	adjust_window_size_when_changing_font_size = true,
+	tab_bar_at_bottom = true,
+	-- enable_osc52_copy = true,
+}
