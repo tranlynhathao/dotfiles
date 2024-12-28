@@ -21,6 +21,8 @@ set timeoutlen=500            "Mapping delay.
 set ttimeoutlen=10            "Key code delay, affect terminal escape.
 set background=dark
 
+set rtp+=/opt/homebrew/opt/fzf
+
 if has("gui_running")         "GVIM SECTION:
   let &guifont = has("win32") ? "consolas:h16": "roboto\ mono\ 15"
 	set guioptions-=m guioptions-=T guioptions-=L   "Hide menubar, toolbar, left scrollbar.
