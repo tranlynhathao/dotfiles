@@ -6,8 +6,7 @@ INSTALL_DIR="$HOME/.local/share/fonts"
 
 mkdir -p $INSTALL_DIR
 
-for FONT in $FONTS
-do
+for FONT in $FONTS; do
   wget "https://github.com/ryanoasis/nerd-fonts/releases/download/$NF_VERSION/$FONT.zip"
   unzip "$FONT.zip" -d "$INSTALL_DIR/$FONT Nerd Font"
   rm "$FONT.zip"
