@@ -451,4 +451,8 @@ export PATH="$HOME/.opam/default/bin:$PATH"
 [[ ! -r '/Users/tranlynhathao/.opam/opam-init/init.zsh' ]] || source '/Users/tranlynhathao/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
 
+# Added by Windsurf
+export PATH="/Users/tranlynhathao/.codeium/windsurf/bin:$PATH"
+
 # zprof
+
