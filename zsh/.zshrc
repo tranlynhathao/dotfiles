@@ -208,7 +208,7 @@ source <(fzf --zsh)
 # ---- END ----
 
 # ----- Bat (better cat) -----
-export BAT_THEME=tokyonight_night
+export BAT_THEME=OneHalfDark
 # ---- END ----
 
 # ---- Eza (better ls) -----
@@ -230,7 +230,7 @@ eval "$(zoxide init zsh)"
 # ---- ALIAS -----
 alias l="eza --git --icons"
 alias nv="nvim"
-alias cat="bat --theme=gruvbox-dark"
+alias cat="bat --theme=tokyonight_night"
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 # v() {
 #     async -q "fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
@@ -454,5 +454,6 @@ export PATH="$HOME/.opam/default/bin:$PATH"
 # Added by Windsurf
 export PATH="/Users/tranlynhathao/.codeium/windsurf/bin:$PATH"
 
-# zprof
+export PATH=$PATH:/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin
 
+# zprof
