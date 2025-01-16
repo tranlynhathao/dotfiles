@@ -123,6 +123,11 @@ return {
 		},
 	},
 
+	-- Enable smooth scrolling
+	scrollback_lines = 5000, -- Set a larger scrollback buffer
+	-- use_scroll_to_scroll = true, -- Enable mouse-based scrolling
+	-- mouse_wheel_scroll_speed = 3, -- Adjust scroll speed
+
 	-- Keybinds
 	keys = {
 		{
@@ -157,4 +162,8 @@ return {
 	adjust_window_size_when_changing_font_size = true,
 	tab_bar_at_bottom = true,
 	-- enable_osc52_copy = true,
+
+	-- disable_alternate_screen_buffer = true,
+	-- scrollback_lines = 3500,
+	-- use_scroll_to_scroll = true,
 }

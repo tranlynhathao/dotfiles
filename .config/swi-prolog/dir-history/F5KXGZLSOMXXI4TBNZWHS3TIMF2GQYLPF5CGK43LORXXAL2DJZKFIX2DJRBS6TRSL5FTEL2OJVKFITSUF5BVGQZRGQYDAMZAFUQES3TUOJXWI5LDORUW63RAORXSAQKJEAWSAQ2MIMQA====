@@ -1,0 +1,7 @@
+_HiStOrY_V2_
+write("helloworld"),\040nl.
+write(\012'hell'),\040nl.
+[test].
+parent(john,\040X).
+mother(X,\040susan).
+sibling(X,\040mike).
