@@ -504,41 +504,41 @@ $env.config = {
             }
         }
         {
-            name: move_down
-            modifier: none
-            keycode: down
-            mode: [emacs, vi_normal, vi_insert]
-            event: {
-                until: [
-                    { send: menudown }
-                    { send: down }
-                ]
-            }
+          name: move_down
+          modifier: none
+          keycode: down
+          mode: [emacs, vi_normal, vi_insert]
+          event: {
+            until: [
+              { send: menudown }
+              { send: down }
+            ]
+          }
         }
         {
-            name: move_left
-            modifier: none
-            keycode: left
-            mode: [emacs, vi_normal, vi_insert]
-            event: {
-                until: [
-                    { send: menuleft }
-                    { send: left }
-                ]
-            }
+          name: move_left
+          modifier: none
+          keycode: left
+          mode: [emacs, vi_normal, vi_insert]
+          event: {
+            until: [
+              { send: menuleft }
+              { send: left }
+            ]
+          }
         }
         {
-            name: move_right_or_take_history_hint
-            modifier: none
-            keycode: right
-            mode: [emacs, vi_normal, vi_insert]
-            event: {
-                until: [
-                    { send: historyhintcomplete }
-                    { send: menuright }
-                    { send: right }
-                ]
-            }
+          name: move_right_or_take_history_hint
+          modifier: none
+          keycode: right
+          mode: [emacs, vi_normal, vi_insert]
+          event: {
+            until: [
+              { send: historyhintcomplete }
+              { send: menuright }
+              { send: right }
+            ]
+          }
         }
         {
             name: move_one_word_left
@@ -553,10 +553,10 @@ $env.config = {
             keycode: right
             mode: [emacs, vi_normal, vi_insert]
             event: {
-                until: [
-                    { send: historyhintwordcomplete }
-                    { edit: movewordright }
-                ]
+              until: [
+                { send: historyhintwordcomplete }
+                { edit: movewordright }
+              ]
             }
         }
         {
@@ -892,15 +892,23 @@ $env.config = {
     ]
 }
 
+# prompt = {
+#     let status_color = if ($env.last_exit_code == 0) { "green" } else { "red" }
+#     $status_color ~ " ❯ "
+# }
+
+let prompt = { starship prompt }
+
 def --env cx [arg] {
     cd $arg
     ls -l
 }
 
-alias l = ls --all
-# aliase l = eza --git --icons
+alias la = ls --all
+alias l = eza --git --icons
 alias c = clear
 alias ll = ls -l
+alias lla = ls -l --all
 alias lt = eza --tree --level=2 --long --icons --git
 alias v = nvim
 alias hms = /nix/store/6kc5srg83nkyg21am089xx7pvq44kn2c-home-manager/bin/home-manager switch
@@ -909,7 +917,6 @@ alias as = aerospace
 def ff [] {
     aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
 }
-
 
 # Git
 alias gc = git commit -m
@@ -941,15 +948,20 @@ alias kc = kubectx
 alias kns = kubens
 alias kl = kubectl logs -f
 alias ke = kubectl exec -it
-def zi [] {
-    let dir = (zoxide query -l | fzf)
-    if $dir != null {
-        cd $dir
-    }
-}
+alias cls = clear
+alias t = touch
+alias cat = bat --theme=gruvbox-dark
+
+
+# def zi [] {
+#     let dir = (zoxide query -l | fzf)
+#     if $dir != null {
+#         cd $dir
+#     }
+# }
 
 source ~/.config/nushell/env.nu
-# source ~/.zoxide.nu
-# source ~/.cache/carapace/init.nu
-# source ~/.local/share/atuin/init.nu
-# use ~/.cache/starship/init.nu
+source ~/.zoxide.nu
+# source ~/.config/atuin/init.nu
+source ~/.config/carapace/init.nu
+use ~/.config/starship/init.nu
