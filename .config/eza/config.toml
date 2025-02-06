@@ -1,0 +1,7 @@
+[colors]
+"*.pl" = "green"
+"*.prolog" = "blue"
+"*.pm" = "magenta"
+
+[features]
+icons = true

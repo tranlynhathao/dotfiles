@@ -99,6 +99,12 @@ use std "path add"
 path add /opt/homebrew/bin
 path add /run/current-system/sw/bin
 
+# nvm into nushell
+let NVM_DIR = ($env.HOME | path join ".nvm")
+def load_nvm [] {
+    bash -c "source $NVM_DIR/nvm.sh"
+}
+
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 

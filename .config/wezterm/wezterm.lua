@@ -38,6 +38,11 @@ wezterm.on("window-focus-changed", function(window, pane)
 	window:set_config_overrides(overrides)
 end)
 
+wezterm.on("open-uri", function(window, pane, uri)
+	wezterm.log_info("Opening URI: " .. uri)
+	wezterm.run_child_process({ "start", uri })
+end)
+
 return {
 	-- Window, layout
 	window_padding = {
@@ -49,7 +54,7 @@ return {
 
 	-- addition
 	-- enable_tab_bar = false,
-	macos_window_background_blur = 20,
+	macos_window_background_blur = 10,
 	window_decorations = "RESIZE",
 	window_background_opacity = 0.8,
 
@@ -62,14 +67,16 @@ return {
 	window_frame = {
 		active_titlebar_bg = "rgba(40, 40, 40, 0.5)", -- transparent
 		inactive_titlebar_bg = "rgba(40, 40, 40, 0.5)",
-		border_left_width = "4px",
-		border_right_width = "4px",
-		border_bottom_height = "4px",
-		border_top_height = "4px",
-		border_left_color = "#98971a",
-		border_right_color = "#98971a", -- #d3869b
-		border_top_color = "#98971a", -- #fabd2f
-		border_bottom_color = "#98971a", -- #83a598
+		border_left_width = "2px",
+		border_right_width = "2px",
+		border_bottom_height = "2px",
+		border_top_height = "2px",
+		-- "#98971a",
+		-- "#FF8C00"
+		border_left_color = "#777779",
+		border_right_color = "#777779", -- #d3869b
+		border_top_color = "#777779", -- #fabd2f
+		border_bottom_color = "#777779", -- #83a598
 	},
 
 	hide_tab_bar_if_only_one_tab = true,
@@ -86,6 +93,14 @@ return {
 			font = load_font(font_italic),
 		},
 	},
+
+	-- Cursor
+	-- (block, beam, underline)
+	default_cursor_style = "SteadyBlock", -- others: "Beam", "Underline"
+	cursor_blink_rate = 500, -- (ms)
+	cursor_thickness = 2,
+	cursor_blink_ease_in = "Linear", -- "Linear", "ease_in", "ease_out", ...
+	cursor_blink_ease_out = "Linear",
 
 	-- Colors
 	color_scheme = "gruvbox",
@@ -123,10 +138,26 @@ return {
 		},
 	},
 
+	-- Mouse
 	-- Enable smooth scrolling
-	scrollback_lines = 5000, -- Set a larger scrollback buffer
 	-- use_scroll_to_scroll = true, -- Enable mouse-based scrolling
 	-- mouse_wheel_scroll_speed = 3, -- Adjust scroll speed
+	mouse_wheel_scroll_method = "smooth", -- "smooth", "adaptive", "default"
+	scrollback_lines = 10000,
+
+	-- Open links
+	hyperlink_rules = {
+		-- Recognize HTTP/HTTPS links
+		{
+			regex = [[\bhttps?://[^\s]+]],
+			format = "$0",
+		},
+		-- Recognize GitHub/GitLab links
+		{
+			regex = [[\b(?:github|gitlab)\.com/[^\s]+]],
+			format = "https://$0",
+		},
+	},
 
 	-- Keybinds
 	keys = {
