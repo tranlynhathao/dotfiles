@@ -139,6 +139,8 @@ let light_theme = {
     shape_raw_string: light_purple
 }
 
+let PATH = ($env.PATH | prepend "/Applications/Docker.app/Contents/Resources/bin")
+
 $env.config = {
     show_banner: false
 
@@ -911,11 +913,19 @@ alias ll = ls -l
 alias lla = ls -l --all
 alias lt = eza --tree --level=2 --long --icons --git
 alias v = nvim
+alias cls = clear
+alias t = touch
+alias cat = bat --theme=gruvbox-dark
+alias v = fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim
+alias tr = eza --tree
+alias tra = eza -a --tree
+alias lg = lazygit
+
 alias hms = /nix/store/6kc5srg83nkyg21am089xx7pvq44kn2c-home-manager/bin/home-manager switch
 alias as = aerospace
 
 def ff [] {
-    aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
+  aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
 }
 
 # Git
@@ -948,10 +958,6 @@ alias kc = kubectx
 alias kns = kubens
 alias kl = kubectl logs -f
 alias ke = kubectl exec -it
-alias cls = clear
-alias t = touch
-alias cat = bat --theme=gruvbox-dark
-
 
 # def zi [] {
 #     let dir = (zoxide query -l | fzf)
@@ -964,4 +970,16 @@ source ~/.config/nushell/env.nu
 source ~/.zoxide.nu
 # source ~/.config/atuin/init.nu
 source ~/.config/carapace/init.nu
+
+$env.PATH = ($env.PATH | append '/Users/tranlynhathao/emsdk')
+$env.PATH = ($env.PATH | append '/Users/tranlynhathao/emsdk/node/20.18.0_64bit/bin')
+$env.PATH = ($env.PATH | append '/Users/tranlynhathao/emsdk/upstream/emscripten')
+
+$env.EMSDK = "/Users/tranlynhathao/emsdk"
+$env.EM_CONFIG = "/Users/tranlynhathao/emsdk/.emscripten"
+$env.EMSCRIPTEN = "/Users/tranlynhathao/emsdk/upstream/emscripten"
+
+$env.PATH = ($env.PATH | append '/Applications/Visual Studio Code.app/Contents/Resources/app/bin')
+
+use ~/.config/nushell/emsdk.nu *
 use ~/.config/starship/init.nu

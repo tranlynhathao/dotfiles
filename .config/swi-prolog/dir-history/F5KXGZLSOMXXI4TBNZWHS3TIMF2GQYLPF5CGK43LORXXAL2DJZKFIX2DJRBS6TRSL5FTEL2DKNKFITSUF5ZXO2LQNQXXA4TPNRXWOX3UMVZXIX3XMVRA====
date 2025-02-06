@@ -3,3 +3,7 @@ pack_install(server).
 debug.
 pack_install(httplog).
 pack_install(simple_web).
+nvim.
+[server].
+node(localhost,\0403000).
+debug.

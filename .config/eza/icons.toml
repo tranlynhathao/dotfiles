@@ -1,7 +1,4 @@
-["perl"]
-extensions = ["pl"]
-icon = "🐫"
-
-["prolog"]
-extensions = ["pl"]
-icon = "🤖"
+[extensions]
+pl = "📜"
+prolog = "🤖"
+pm = "🐪"

@@ -456,4 +456,6 @@ export PATH="/Users/tranlynhathao/.codeium/windsurf/bin:$PATH"
 
 export PATH=$PATH:/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin
 
+export PATH="/opt/homebrew/opt/docker-credential-helper/bin:$PATH"
+
 # zprof

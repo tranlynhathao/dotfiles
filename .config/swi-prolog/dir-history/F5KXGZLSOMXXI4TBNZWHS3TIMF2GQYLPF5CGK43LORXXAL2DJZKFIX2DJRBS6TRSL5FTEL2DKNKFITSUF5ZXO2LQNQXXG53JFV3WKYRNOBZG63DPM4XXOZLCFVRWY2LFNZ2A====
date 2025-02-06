@@ -1,0 +1,5 @@
+_HiStOrY_V2_
+?-\040current_prolog_flag(version,\040Version).
+use_module(library(pengines)).
+pengines_version(Version).
+?-\040current_prolog_flag(version,\040Version).
