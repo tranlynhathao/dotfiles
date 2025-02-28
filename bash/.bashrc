@@ -676,3 +676,6 @@ alias mplist="multipass list | grep -v Deleted"
 highlight() {
     echo -e "\e[1;34m$@\e[0m"
 }
+
+# Created by `pipx` on 2025-02-26 01:21:13
+export PATH="$PATH:/Users/tranlynhathao/.local/bin"

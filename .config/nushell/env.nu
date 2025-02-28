@@ -96,6 +96,12 @@ use std "path add"
 # path add ($env.CARGO_HOME | path join "bin")
 # path add ($env.HOME | path join ".local" "bin")
 # $env.PATH = ($env.PATH | uniq)
+
+$env.PATH = ($env.PATH | append "/opt/homebrew/bin")
+$env.PATH = ($env.PATH | append "$HOME/.pyenv/bin")
+$env.PATH = ($env.PATH | append "/opt/homebrew/bin/g++-14")
+$env.PATH = ($env.PATH | append /opt/anaconda3/bin)
+
 path add /opt/homebrew/bin
 path add /run/current-system/sw/bin
 
