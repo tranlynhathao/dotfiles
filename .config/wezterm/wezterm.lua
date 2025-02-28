@@ -52,6 +52,9 @@ return {
 		bottom = pad,
 	},
 
+	enable_kitty_keyboard = false,
+	term = "xterm-256color",
+
 	-- addition
 	-- enable_tab_bar = false,
 	macos_window_background_blur = 10,
@@ -142,7 +145,7 @@ return {
 	-- Enable smooth scrolling
 	-- use_scroll_to_scroll = true, -- Enable mouse-based scrolling
 	-- mouse_wheel_scroll_speed = 3, -- Adjust scroll speed
-	mouse_wheel_scroll_method = "smooth", -- "smooth", "adaptive", "default"
+	-- mouse_wheel_scroll_method = "smooth", -- "smooth", "adaptive", "default"
 	scrollback_lines = 10000,
 
 	-- Open links

@@ -459,3 +459,4 @@ export PATH=$PATH:/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin
 export PATH="/opt/homebrew/opt/docker-credential-helper/bin:$PATH"
 
 # zprof
+export GPG_TTY=/dev/ttys002

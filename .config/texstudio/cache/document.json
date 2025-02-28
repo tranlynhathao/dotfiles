@@ -1,0 +1,108 @@
+{
+    "bibitems": [
+    ],
+    "bibtexfiles": [
+    ],
+    "childdocs": [
+    ],
+    "filename": "/Users/tranlynhathao/Downloads/document.tex",
+    "labels": [
+        "fig:q6"
+    ],
+    "modified": "Tue Feb 25 22:18:41 2025",
+    "packages": [
+        "#hyperref",
+        "#nameref",
+        "#titling",
+        "#graphicx",
+        "#xcolor",
+        "#listings",
+        "#tikz",
+        "#framed",
+        "#amsfonts",
+        "#amssymb",
+        "#amsmath",
+        "#pythonhighlight",
+        "many#tcolorbox",
+        "#xcolor",
+        "#lipsum",
+        "11pt#latex-document",
+        "11pt#tex",
+        "#fancyhdr"
+    ],
+    "refs": [
+        "fig:q6",
+        "fig:q6",
+        "fig:q6",
+        "fig:q6"
+    ],
+    "toc": [
+        "3#Use a pre-train model#89"
+    ],
+    "usercommands": [
+        [
+            "",
+            "%color%codepurple"
+        ],
+        [
+            "boxC",
+            "\\end{boxC}"
+        ],
+        [
+            "boxC",
+            "\\begin{boxC}"
+        ],
+        [
+            "\\a",
+            "\\a"
+        ],
+        [
+            "\\themycounter",
+            "\\themycounter"
+        ],
+        [
+            "",
+            "%color%sub"
+        ],
+        [
+            "\\a",
+            "\\a"
+        ],
+        [
+            "\\a",
+            "\\a"
+        ],
+        [
+            "",
+            "%color%codegreen"
+        ],
+        [
+            "\\showmycounter",
+            "\\showmycounter"
+        ],
+        [
+            "\\a",
+            "\\a"
+        ],
+        [
+            "",
+            "%color%codegray"
+        ],
+        [
+            "\\showlips",
+            "\\showlips"
+        ],
+        [
+            "\\a",
+            "\\a"
+        ],
+        [
+            "",
+            "%color%backcolour"
+        ],
+        [
+            "\\a",
+            "\\a"
+        ]
+    ]
+}

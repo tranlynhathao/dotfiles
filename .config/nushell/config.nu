@@ -920,6 +920,9 @@ alias v = fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --previ
 alias tr = eza --tree
 alias tra = eza -a --tree
 alias lg = lazygit
+alias python = python3
+alias pip = pip3
+alias cpp = g++-14
 
 alias hms = /nix/store/6kc5srg83nkyg21am089xx7pvq44kn2c-home-manager/bin/home-manager switch
 alias as = aerospace
@@ -967,6 +970,7 @@ alias ke = kubectl exec -it
 # }
 
 source ~/.config/nushell/env.nu
+# source /opt/anaconda3/etc/profile.d/conda.sh
 source ~/.zoxide.nu
 # source ~/.config/atuin/init.nu
 source ~/.config/carapace/init.nu
