@@ -912,7 +912,7 @@ alias c = clear
 alias ll = ls -l
 alias lla = ls -l --all
 alias lt = eza --tree --level=2 --long --icons --git
-alias v = nvim
+alias nv = nvim
 alias cls = clear
 alias t = touch
 alias cat = bat --theme=gruvbox-dark
@@ -926,6 +926,13 @@ alias cpp = g++-14
 
 alias hms = /nix/store/6kc5srg83nkyg21am089xx7pvq44kn2c-home-manager/bin/home-manager switch
 alias as = aerospace
+
+# def code [...args] {
+#     zsh -c "'/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' $@" -- ...$args
+# }
+
+alias code = zsh -c '"/Applications/Visual Studio Code .app/Contents/Resources/app/bin/code" .'
+
 
 def ff [] {
   aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
@@ -982,7 +989,6 @@ $env.PATH = ($env.PATH | append '/Users/tranlynhathao/emsdk/upstream/emscripten'
 $env.EMSDK = "/Users/tranlynhathao/emsdk"
 $env.EM_CONFIG = "/Users/tranlynhathao/emsdk/.emscripten"
 $env.EMSCRIPTEN = "/Users/tranlynhathao/emsdk/upstream/emscripten"
-
 $env.PATH = ($env.PATH | append '/Applications/Visual Studio Code.app/Contents/Resources/app/bin')
 
 use ~/.config/nushell/emsdk.nu *

@@ -101,6 +101,8 @@ $env.PATH = ($env.PATH | append "/opt/homebrew/bin")
 $env.PATH = ($env.PATH | append "$HOME/.pyenv/bin")
 $env.PATH = ($env.PATH | append "/opt/homebrew/bin/g++-14")
 $env.PATH = ($env.PATH | append /opt/anaconda3/bin)
+$env.PATH = ($env.PATH | append '/Applications/Visual Studio Code.app/Contents/Resources/app/bin')
+
 
 path add /opt/homebrew/bin
 path add /run/current-system/sw/bin
