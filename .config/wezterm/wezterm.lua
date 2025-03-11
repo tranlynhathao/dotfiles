@@ -33,7 +33,8 @@ end
 wezterm.on("window-focus-changed", function(window, pane)
 	local overrides = window:get_config_overrides() or {}
 	overrides.colors = {
-		background = "rgba(40, 40, 40, 0.9)",
+		-- background = "rgba(40, 40, 40, 0.9)",
+		background = "#1E1E2E",
 	}
 	window:set_config_overrides(overrides)
 end)
@@ -57,9 +58,10 @@ return {
 
 	-- addition
 	-- enable_tab_bar = false,
-	macos_window_background_blur = 10,
+	macos_window_background_blur = 0, -- 10
 	window_decorations = "RESIZE",
-	window_background_opacity = 0.8,
+	-- window_background_opacity = 0.8, -- transparent
+	window_background_opacity = 1,
 
 	-- window_frame = {
 	-- 	active_titlebar_bg = "#3c3836",
@@ -110,7 +112,8 @@ return {
 	color_schemes = {
 		gruvbox = {
 			foreground = "#ebdbb2",
-			background = "#282828",
+			-- background = "#282828",
+			background = "#1E1E2E",
 			cursor_bg = "#928374",
 			cursor_border = "#ebdbb2",
 			cursor_fg = "#282828",

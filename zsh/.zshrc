@@ -346,6 +346,11 @@ eval "$(atuin init zsh)"
 
 # alias python="python3"
 
+# ---- VSCODE ----
+alias code='/Applications/Visual\ Studio\ Code\ .app/Contents/Resources/app/bin/code'
+# ---- END ----
+
+
 # ---- fetch OS -----
 # neofetch
 # pfetch
@@ -454,7 +459,7 @@ export PATH="$HOME/.opam/default/bin:$PATH"
 # Added by Windsurf
 export PATH="/Users/tranlynhathao/.codeium/windsurf/bin:$PATH"
 
-export PATH=$PATH:/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin
+export PATH="$PATH:/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin"
 
 export PATH="/opt/homebrew/opt/docker-credential-helper/bin:$PATH"
 
