@@ -28,3 +28,5 @@ zsh/.zsh_history
 zsh/.zshrc-e
 
 backup_home_files/
+
+.config/github-copilot/apps.json
