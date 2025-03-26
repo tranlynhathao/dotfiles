@@ -30,3 +30,24 @@ zsh/.zshrc-e
 backup_home_files/
 
 .config/github-copilot/apps.json
+
+gh/hosts.yml
+raycast/config.json
+git/config
+jgit/config
+karabiner/karabiner.json
+
+bpytop/error.log
+btop/btop.log
+packer/checkpoint_*
+GameMakerStudio2/Cache/
+Microsoft\VisualStudio Services/
+texstudio/cache/
+texstudio/lastSession.txss2
+texstudio/packageCache.dat
+wireshark/recent
+wireshark/recent_common
+
+configstore/
+coc/extensions/
+nvim/lazy-lock.json
