@@ -1,0 +1,26 @@
+name: Update Nix Packages
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+
+jobs:
+  update-nix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v22
+
+      - name: Update Nix flake
+        run: nix flake update
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add flake.lock
+          git commit -m "chore: update Nix flake.lock" || exit 0
+          git push
+
