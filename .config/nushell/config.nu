@@ -911,6 +911,9 @@ alias l = eza --git --icons
 alias c = clear
 alias ll = ls -l
 alias lla = ls -l --all
+def llb [] {
+    ls -a | update size { |row| $row.size | into int } | sort-by type | select name size type
+}
 alias lt = eza --tree --level=2 --long --icons --git
 alias nv = nvim
 alias cls = clear
