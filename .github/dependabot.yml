@@ -14,7 +14,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    versioning-strategy: increase
     labels:
       - "dependencies"
       - "submodules"
