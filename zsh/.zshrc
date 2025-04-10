@@ -2,6 +2,7 @@
 # Enable Pstruct Student *studentowerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -25,6 +26,7 @@ alias nskhd="nvim ~/.config/skhd/"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:$PATH"
 
 # ---- homebrew ----
 # export PATH="/usr/local/bin:$PATH" # if chip intel
@@ -45,7 +47,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -214,7 +216,7 @@ export BAT_THEME=OneHalfDark
 # ---- Eza (better ls) -----
 alias lza="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lxa="eza --color=always --long --git"
-alias tr="eza --tree"
+# alias tr="eza --tree"
 alias tra="eza -a --tree"
 # ---- END -----
 
@@ -459,5 +461,9 @@ export PATH=$PATH:/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin
 
 export PATH="/opt/homebrew/opt/docker-credential-helper/bin:$PATH"
 
-# zprof
 export GPG_TTY=/dev/ttys002
+
+source $ZSH_CUSTOM/plugins/zgen/zgen.zsh
+
+source ~/.zplug/init.zsh
+# zprof
