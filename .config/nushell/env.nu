@@ -105,6 +105,7 @@ $env.PATH = ($env.PATH | append '/Applications/Visual Studio Code.app/Contents/R
 
 
 path add /opt/homebrew/bin
+path add /bin
 path add /run/current-system/sw/bin
 
 # nvm into nushell
@@ -125,3 +126,21 @@ $env.NIX_CONF_DIR = "/Users/tranlynhathao/.config/nix"
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 mkdir ~/.cache/carapace
 carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
+# Load fnm environment variables (safe)
+let fnm_env = (fnm env --shell bash | lines)
+
+for line in $fnm_env {
+    if ($line | str starts-with "export ") {
+        let pair = ($line | str replace "export " "" | str replace "\"" "" | split row "=")
+        if ($pair | length) == 2 {
+            let key = $pair.0
+            let value = $pair.1
+            load-env { $key: $value }
+        }
+    }
+}
+
+source ~/.zoxide.nu
+source ~/.cache/starship/init.nu
+source ~/.cache/carapace/init.nu
