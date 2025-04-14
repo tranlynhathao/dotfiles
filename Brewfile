@@ -575,6 +575,30 @@ cask "visual-studio-code"
 cask "wine-stable"
 # HTML to PDF renderer
 cask "wkhtmltopdf"
+mas "2048 Game", id: 871033113
+mas "AmorphousDiskMark", id: 1168254295
+mas "Authenticator", id: 1538761576
+mas "CleanMyMac", id: 1339170533
+mas "Code AI", id: 6446805484
+mas "ColorSlurp", id: 1287239339
+mas "Encrypto", id: 935235287
+mas "G App Launcher", id: 1543803459
+mas "Grammarly for Safari", id: 1462114288
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Lightshot Screenshot", id: 526298438
+mas "Mate Translate", id: 1005088137
+mas "Notion Web Clipper", id: 1559269364
+mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
+mas "Pages", id: 409201541
+mas "QR Journal", id: 483820530
+mas "The Unarchiver", id: 425424353
+mas "Trello", id: 1278508951
+mas "Urban VPN Desktop", id: 1517772049
+mas "Vimari", id: 1480933944
+mas "WhatsApp", id: 310633997
+mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "abusaidm.html-snippets"
 vscode "adpyke.codesnap"
