@@ -234,6 +234,8 @@ alias l="eza --git --icons"
 alias nv="nvim"
 alias cat="bat --theme=tokyonight_night"
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
+alias vf="fd --type f --hidden --exclude .git | fzf --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
+
 # v() {
 #     async -q "fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 # }
@@ -256,6 +258,28 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ---- CPP ----
+# use g++-14
+# cpp() {
+#     if [ "$#" -lt 1 ]; then
+#         echo "Usage: cpp output_file source_file1.cpp source_file2.cpp ..."
+#         return 1
+#     fi
+#     output_file="$1"
+#     shift
+#     g "$@" -o "$output_file" && ./"$output_file"
+# }
+#
+# c() {
+#     if [ "$#" -lt 1 ]; then
+#         echo "Usage: c output_file source_file1.c source_file2.c ..."
+#         return 1
+#     fi
+#     output_file="$1"
+#     shift
+#     gcc-14 "$@" -o "$output_file" && ./"$output_file"
+# }
+
+# use clang++
 cpp() {
     if [ "$#" -lt 1 ]; then
         echo "Usage: cpp output_file source_file1.cpp source_file2.cpp ..."
@@ -263,7 +287,7 @@ cpp() {
     fi
     output_file="$1"
     shift
-    g "$@" -o "$output_file" && ./"$output_file"
+    clang++ -std=c++17 "$@" -o "$output_file" && ./"$output_file"
 }
 
 c() {
@@ -273,9 +297,8 @@ c() {
     fi
     output_file="$1"
     shift
-    gcc-14 "$@" -o "$output_file" && ./"$output_file"
+    clang -std=c11 "$@" -o "$output_file" && ./"$output_file"
 }
-
 
 mkcd() {
     mkdir -p "$1" && cd "$1"
@@ -465,5 +488,27 @@ export GPG_TTY=/dev/ttys002
 
 source $ZSH_CUSTOM/plugins/zgen/zgen.zsh
 
-source ~/.zplug/init.zsh
 # zprof
+
+# source ~/.zplug/init.zsh
+
+# # Load ZI (new Zinit)
+# zi light-mode for \
+#   zsh-users/zsh-autosuggestions \
+#   zsh-users/zsh-syntax-highlighting
+
+# zi light zsh-users/zsh-autosuggestions
+# zi light zsh-users/zsh-syntax-highlighting
+# zi light Aloxaf/fzf-tab
+# zi light jeffreytse/zsh-vi-mode
+# zi light agkozak/zsh-z
+
+# Example plugins
+# zi light zsh-users/zsh-autosuggestions
+# zi light zsh-users/zsh-syntax-highlighting
+# zi light zdharma-continuum/fast-syntax-highlighting
+# zi light z-shell/F-Sy-H
+
+# source ~/.zi/bin/zi.zsh
+
+# autoload -Uz compinit && compinit
