@@ -142,6 +142,11 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run p10k configure or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# ---- OpenAI ----
+[ -f ~/.openai.env ] && source ~/.openai.env
+# ---- END ----
+
 # ---- FZF ----
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
