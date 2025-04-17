@@ -51,3 +51,5 @@ wireshark/recent_common
 configstore/
 coc/extensions/
 nvim/lazy-lock.json
+
+.openai.env
