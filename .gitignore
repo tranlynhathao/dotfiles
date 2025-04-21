@@ -32,13 +32,13 @@ backup_home_files/
 .config/github-copilot/apps.json
 
 gh/hosts.yml
-raycast/config.json
+.config/raycast/config.json
 git/config
 jgit/config
 karabiner/karabiner.json
 
-bpytop/error.log
-btop/btop.log
+.config/bpytop/error.log
+.config/btop/btop.log
 packer/checkpoint_*
 GameMakerStudio2/Cache/
 Microsoft\VisualStudio Services/
@@ -48,8 +48,9 @@ texstudio/packageCache.dat
 wireshark/recent
 wireshark/recent_common
 
-configstore/
-coc/extensions/
+.config/configstore/
+.config/coc/extensions/
+.config/nvim/lazy-lock.json
 nvim/lazy-lock.json
 
 .openai.env
