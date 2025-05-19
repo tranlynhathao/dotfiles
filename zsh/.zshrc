@@ -517,3 +517,5 @@ source $ZSH_CUSTOM/plugins/zgen/zgen.zsh
 # source ~/.zi/bin/zi.zsh
 
 # autoload -Uz compinit && compinit
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
