@@ -7,6 +7,7 @@ tap "jandedobbeleer/oh-my-posh"
 tap "jesseduffield/lazygit"
 tap "knqyf263/pet"
 tap "koekeishiya/formulae"
+tap "microsoft/mssql-release"
 tap "mongodb/brew"
 tap "ngrok/ngrok"
 tap "nikitabobko/tap"
@@ -166,6 +167,8 @@ brew "gawk"
 brew "gdbm"
 # GitHub command-line tool
 brew "gh"
+# GIF image/animation creator/editor
+brew "gifsicle"
 # Distributed revision control system
 brew "git"
 # Syntax-highlighting pager for git and diff output
@@ -258,6 +261,8 @@ brew "lsd"
 brew "lua"
 # Language Server for the Lua language
 brew "lua-language-server"
+# Tool for linting and static analysis of Lua code
+brew "luacheck"
 # Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit"
 # Package manager for the Lua programming language
@@ -289,7 +294,7 @@ brew "yt-dlp"
 # Media player based on MPlayer and mplayer2
 brew "mpv"
 # Open source relational database management system
-brew "mysql"
+brew "mysql", restart_service: :changed
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
 # NCurses Disk Usage
@@ -318,6 +323,8 @@ brew "numpy"
 brew "nushell"
 # Manage multiple Node.js versions
 brew "nvm"
+# Create, run, and share large language models (LLMs)
+brew "ollama", restart_service: :changed, link: false
 # Command-line Git information tool
 brew "onefetch"
 # OCaml package manager
@@ -331,7 +338,7 @@ brew "openjdk@11"
 # Development kit for the Java programming language
 brew "openjdk@17"
 # Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
+brew "openssl@1.1", link: true
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Render and include figures in Pandoc documents using many plotting toolkits
@@ -351,9 +358,11 @@ brew "pnpm", link: false
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
-brew "postgresql@14"
+brew "postgresql@14", restart_service: :changed
 # Object-relational database system
 brew "postgresql@15"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
 # Python version management
 brew "pyenv"
 # Generic syntax highlighter
@@ -374,6 +383,8 @@ brew "ruby-build"
 brew "rbenv"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
+# Persistent key-value database, with built-in net interface
+brew "redis", restart_service: :changed
 # Command-line interface for Render
 brew "render"
 # Search tool like grep and The Silver Searcher
@@ -390,6 +401,8 @@ brew "run"
 brew "rust"
 # Rust toolchain installer
 brew "rustup"
+# Display and control your Android device
+brew "scrcpy"
 # Generate ASCII art with terminal, shell, and OS info
 brew "screenfetch"
 # Sample multi-channel audio mixer library
@@ -401,7 +414,7 @@ brew "sdl2_ttf"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
 # Multi-media library with bindings for multiple languages
-brew "sfml"
+brew "sfml@2", link: true
 # Yet another network load monitor
 brew "slurm"
 # Simple terminal-based rapid serial visual presentation (RSVP) reader
@@ -414,6 +427,8 @@ brew "stow"
 brew "stylua"
 # ISO/Edinburgh-style Prolog interpreter
 brew "swi-prolog"
+# Formatting tool for reformatting Swift code
+brew "swiftformat"
 # Change macOS audio source from the command-line
 brew "switchaudio-osx"
 # Feature-rich console based todo list manager
@@ -472,10 +487,16 @@ brew "youtube-dl"
 brew "zbar"
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+# Flexible and fast Zsh plugin manager
+brew "zinit"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Additional completion definitions for zsh
+brew "zsh-completions"
 # The modern, text-based browser
 brew "browsh-org/browsh/browsh"
 # SDK
@@ -494,6 +515,10 @@ brew "knqyf263/pet/pet"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai", args: ["HEAD"]
+# ODBC Driver for Microsoft(R) SQL Server(R)
+brew "microsoft/mssql-release/msodbcsql"
+# Sqlcmd and Bcp for Microsoft(R) SQL Server(R)
+brew "microsoft/mssql-release/mssql-tools"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community", link: false
 # High-performance, schema-free, document-oriented database
@@ -559,6 +584,8 @@ cask "mongodb-compass"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 cask "not-pacman"
+# Get up and running with large language models locally
+cask "ollama"
 # Scientific and technical publishing system built on Pandoc
 cask "quarto"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -571,8 +598,6 @@ cask "temurin"
 cask "temurin@11"
 # Open-source code editor
 cask "visual-studio-code"
-# Compatibility layer to run Windows applications
-cask "wine-stable"
 # HTML to PDF renderer
 cask "wkhtmltopdf"
 mas "2048 Game", id: 871033113
@@ -593,6 +618,8 @@ mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
 mas "QR Journal", id: 483820530
+mas "Smart JSON Editor", id: 1268962404
+mas "Swiftify for Xcode", id: 1183412116
 mas "The Unarchiver", id: 425424353
 mas "Trello", id: 1278508951
 mas "Urban VPN Desktop", id: 1517772049
