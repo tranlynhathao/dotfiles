@@ -225,8 +225,8 @@ alias lxa="eza --color=always --long --git"
 alias tra="eza -a --tree"
 # ---- END -----
 
-eval $(thefuck --alias)
 # ---- TheFuck -----
+eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 # ---- END -----
 
@@ -240,11 +240,14 @@ alias nv="nvim"
 alias cat="bat --theme=tokyonight_night"
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 alias vf="fd --type f --hidden --exclude .git | fzf --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
+alias pwd="pwd | lolcat"
 
 # v() {
 #     async -q "fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 # }
 
+alias pathlist='echo "$PATH" | tr ":" "\n"'
+alias pathuniq='echo "$PATH" | tr ":" "\n" | awk "!seen[\$0]++"'
 alias mplist="multipass list | grep -v Deleted"
 alias cls="clear"
 alias t="touch"
@@ -519,4 +522,3 @@ export GPG_TTY=/dev/ttys002
 # autoload -Uz compinit && compinit
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
