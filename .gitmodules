@@ -4,3 +4,6 @@
 [submodule "dotfiles/nvim"]
 	path = dotfiles/nvim
 	url = https://github.com/mgastonportillo/nvchad-config.git
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/mgastonportillo/nvchad-config.git
