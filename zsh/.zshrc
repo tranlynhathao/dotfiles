@@ -247,6 +247,8 @@ alias vf="fd --type f --hidden --exclude .git | fzf --reverse --preview='bat --c
 
 alias mplist="multipass list | grep -v Deleted"
 alias cls="clear"
+alias pathlist='echo "$PATH" | tr ":" "\n"'
+alias pathuniq='echo "$PATH" | tr ":" "\n" | awk "!seen[\$0]++"'
 alias t="touch"
 alias cd="z"
 alias g='/opt/homebrew/bin/g++-14'

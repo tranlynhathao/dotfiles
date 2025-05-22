@@ -15,6 +15,10 @@ tap "oven-sh/bun"
 tap "riscv/riscv"
 tap "sass/sass"
 tap "sergiobenitez/osxct"
+# Library and utilities for processing GIFs
+brew "giflib"
+# Library for manipulating PNG images
+brew "libpng"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # New file format for still image compression
@@ -201,6 +205,8 @@ brew "gource"
 brew "gpgme"
 # Profiling and benchmarking tool for Gradle builds
 brew "gradle-profiler"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GitHub Markdown previewer
@@ -227,6 +233,8 @@ brew "igv"
 brew "jenkins-lts", restart_service: :changed
 # Command-line pager for JSON data
 brew "jless"
+# Image manipulation library
+brew "jpeg"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Handy way to save and run project-specific commands
@@ -247,6 +255,8 @@ brew "libcaca"
 brew "libffi"
 # Convenience library for creating .opus files
 brew "libopusenc"
+# Postgres C API library
+brew "libpq"
 # Next-gen compiler infrastructure
 brew "llvm"
 # LLVM Project Linker
@@ -294,7 +304,7 @@ brew "yt-dlp"
 # Media player based on MPlayer and mplayer2
 brew "mpv"
 # Open source relational database management system
-brew "mysql", restart_service: :changed
+brew "mysql"
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
 # NCurses Disk Usage
