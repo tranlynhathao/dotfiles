@@ -26,7 +26,6 @@
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
 - Browser: [Safari](https://www.apple.com/lae/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/)
 - Launcher: [Raycast](https://www.raycast.com/)
-<!-- - Bar: Übersicht -->
 - Colorscheme: [gruvbox](https://github.com/morhetz/gruvbox) (via kitty & neovim theme)
 
 ## 📁 Structure
