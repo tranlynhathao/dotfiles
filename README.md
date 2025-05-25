@@ -36,7 +36,7 @@ dotfiles/
 │   ├── tmux/
 │   ├── kitty/
 │   └── ...
-├── nvchad-config/                   # Neovim config (as a Git submodule), resources: mgastonportillo
+├── nvchad-config/          # Neovim config (as a Git submodule), resources: mgastonportillo
 ├── .gitmodules             # Submodule tracking file
 ├── .zshrc / .bashrc        # Shell configs
 ├── .gitconfig              # Git personal settings
