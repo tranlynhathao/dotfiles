@@ -81,4 +81,5 @@ Feel free to fork, raise an issue, or reach out if you want to suggest improveme
 
 ## 📜 License
 
-[MIT License](./LICENSE)
+[MIT License](https://github.com/tranlynhathao/dotfiles?tab=MIT-1-ov-file)
+<!-- [MIT License](./LICENSE) -->
