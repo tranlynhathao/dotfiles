@@ -52,7 +52,7 @@ This repository uses [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-S
 To clone the repo with submodules:
 
 ```bash
-git clone --recurse-submodules https://github.com/yourusername/dotfiles.git
+git clone --recurse-submodules https://github.com/tranlynhathao/dotfiles.git
 ```
 
 If you’ve already cloned it:
@@ -81,7 +81,7 @@ ln -s ~/dotfiles/nvim ~/.config/nvim
 - Shell: [Fish](https://fishshell.com/) or [Zsh](https://www.zsh.org/)
 - Prompt: [Starship](https://starship.rs/)
 
-## ⚙️ Tools & Technologies
+## ⚙️  Tools & Technologies
 
 - [Neovim](https://neovim.io/) (with [NvChad](https://nvchad.com/))
 - [tmux](https://github.com/tmux/tmux)
