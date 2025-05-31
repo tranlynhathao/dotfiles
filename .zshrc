@@ -521,4 +521,5 @@ export GPG_TTY=/dev/ttys002
 
 # autoload -Uz compinit && compinit
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$HOME/.mix/escripts:$PATH"
