@@ -13,17 +13,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Update NVChad config
+      - name: Pull latest NVChad config
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-
-          if git log | grep -q 'git-subtree-dir: nvim'; then
-            echo "Updating existing subtree..."
+          if [ -d "nvim" ]; then
             git subtree pull --prefix=nvim https://github.com/mgastonportillo/nvchad-config.git main --squash
           else
-            echo "Adding subtree for the first time..."
             git subtree add --prefix=nvim https://github.com/mgastonportillo/nvchad-config.git main --squash
           fi
-
           git push
