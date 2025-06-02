@@ -1,62 +1,90 @@
-name: Update Homebrew Packages
+# name: Update Homebrew Packages
+#
+# on:
+#   schedule:
+#     - cron: "0 0 * * 1"
+#   workflow_dispatch:
+#
+# jobs:
+#   update-brew:
+#     runs-on: macos-latest
+#
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#
+#       - name: Cache Homebrew downloads
+#         uses: actions/cache@v4
+#         with:
+#           path: |
+#             ~/Library/Caches/Homebrew
+#             /usr/local/Homebrew/Library/Taps
+#           key: ${{ runner.os }}-brew-${{ hashFiles('Brewfile') }}
+#           restore-keys: |
+#             ${{ runner.os }}-brew-
+#
+#       - name: Run brew update/upgrade
+#         run: |
+#           brew update
+#           brew upgrade
+#           brew cleanup
+#
+#       - name: Check brew health
+#         run: |
+#           echo "Running brew doctor..."
+#           brew doctor || true
+#
+#       - name: Regenerate Brewfile
+#         run: |
+#           brew bundle dump --force
+#
+#       - name: Show diff
+#         run: |
+#           git diff Brewfile || true
+#
+#       - name: Configure Git
+#         run: |
+#           git config --global user.name "github-actions[bot]"
+#           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+#
+#       - name: Create Pull Request if Brewfile changed
+#         uses: peter-evans/create-pull-request@v5
+#         with:
+#           commit-message: "chore: update Homebrew packages"
+#           title: "chore: update Homebrew packages"
+#           body: |
+#             This PR was created automatically by a scheduled workflow.
+#
+#             - Updated packages via `brew upgrade`
+#             - Regenerated `Brewfile` via `brew bundle dump`
+#             - Reviewed using `brew doctor`
+#           branch: update-homebrew
+#           delete-branch: true
 
+name: Update Homebrew Packages
 on:
   schedule:
     - cron: "0 0 * * 1"
   workflow_dispatch:
 
+
 jobs:
   update-brew:
     runs-on: macos-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Cache Homebrew downloads
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/Library/Caches/Homebrew
-            /usr/local/Homebrew/Library/Taps
-          key: ${{ runner.os }}-brew-${{ hashFiles('Brewfile') }}
-          restore-keys: |
-            ${{ runner.os }}-brew-
-
-      - name: Run brew update/upgrade
+      - name: Update Homebrew packages
         run: |
           brew update
           brew upgrade
-          brew cleanup
-
-      - name: Check brew health
-        run: |
-          echo "Running brew doctor..."
-          brew doctor || true
-
-      - name: Regenerate Brewfile
-        run: |
           brew bundle dump --force
 
-      - name: Show diff
-        run: |
-          git diff Brewfile || true
-
-      - name: Configure Git
+      - name: Commit changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Create Pull Request if Brewfile changed
-        uses: peter-evans/create-pull-request@v5
-        with:
-          commit-message: "chore: update Homebrew packages"
-          title: "chore: update Homebrew packages"
-          body: |
-            This PR was created automatically by a scheduled workflow.
-
-            - Updated packages via `brew upgrade`
-            - Regenerated `Brewfile` via `brew bundle dump`
-            - Reviewed using `brew doctor`
-          branch: update-homebrew
-          delete-branch: true
+          git add Brewfile
+          git commit -m "chore: update Homebrew packages" || exit 0
+          git push
