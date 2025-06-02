@@ -1,4 +1,4 @@
-name: Update Homebrew Packages
+name: Update Nix Packages
 
 on:
   schedule:
@@ -6,57 +6,35 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-brew:
-    runs-on: macos-latest
+  update-nix:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Cache Homebrew downloads
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/Library/Caches/Homebrew
-            /usr/local/Homebrew/Library/Taps
-          key: ${{ runner.os }}-brew-${{ hashFiles('Brewfile') }}
-          restore-keys: |
-            ${{ runner.os }}-brew-
+      - name: Install Nix
+        uses: cachix/install-nix-action@v23
 
-      - name: Run brew update/upgrade
+      - name: Check and Update flake.lock
+        if: ${{ hashFiles('flake.nix') != '' }}
         run: |
-          brew update
-          brew upgrade
-          brew cleanup
-
-      - name: Check brew health
-        run: |
-          echo "Running brew doctor..."
-          brew doctor || true
-
-      - name: Regenerate Brewfile
-        run: |
-          brew bundle dump --force
-
-      - name: Show diff
-        run: |
-          git diff Brewfile || true
+          nix flake update
+          echo "::group::flake.lock diff"
+          git diff flake.lock || true
+          echo "::endgroup::"
 
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create Pull Request if Brewfile changed
+      - name: Create Pull Request if flake.lock changed
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "chore: update Homebrew packages"
-          title: "chore: update Homebrew packages"
+          commit-message: "chore: update Nix flake.lock"
+          title: "chore: update Nix flake.lock"
           body: |
-            This PR was created automatically by a scheduled workflow.
-
-            - Updated packages via `brew upgrade`
-            - Regenerated `Brewfile` via `brew bundle dump`
-            - Reviewed using `brew doctor`
-          branch: update-homebrew
+            This PR was automatically created by GitHub Actions to keep Nix flake inputs up to date.
+          branch: update-nix-flake
           delete-branch: true
