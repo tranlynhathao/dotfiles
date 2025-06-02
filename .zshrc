@@ -523,3 +523,8 @@ export GPG_TTY=/dev/ttys002
 
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH="$HOME/.mix/escripts:$PATH"
+
+function set_tab_title() {
+  echo -ne "\033]2;${PWD##*/}\007"
+}
+PROMPT_COMMAND="set_tab_title${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
