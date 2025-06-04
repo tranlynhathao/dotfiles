@@ -528,3 +528,4 @@ function set_tab_title() {
   echo -ne "\033]2;${PWD##*/}\007"
 }
 PROMPT_COMMAND="set_tab_title${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
