@@ -3,7 +3,6 @@ NOTE
 
 * You used to Zgen to manage plugins (base on `.zgen/...`)
 
-
 ## ✅ Case 1: Begin Oh My Zsh
 
 ### 1. Remove Zgen configuration
@@ -49,7 +48,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 ## ✅ **Case 2: Reuse Zgen (Manage plugin by Zgen)**
 
-### 1. Set up Zgen:
+### 1. Set up Zgen
 
 ```bash
 git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
@@ -70,7 +69,7 @@ if ! zgen saved; then
 fi
 ```
 
-### 3. Reload:
+### 3. Reload
 
 ```bash
 exec zsh

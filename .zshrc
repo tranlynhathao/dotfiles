@@ -529,3 +529,25 @@ function set_tab_title() {
 }
 PROMPT_COMMAND="set_tab_title${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# Created by `pipx` on 2025-06-04 13:45:23
+export PATH="$PATH:/Users/tranlynhathao/.local/bin"
+
+# # pnpm
+# export PNPM_HOME="/Users/tranlynhathao/Library/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
+# # pnpm end
+
+# Enable vi mode like vim
+bindkey -v
+
+# Custom keybinding
+bindkey '^L' clear-screen
+# function vi-jj() {
+#   zle vi-cmd-mode
+# }
+# zle -N vi-jj
+bindkey -M viins 'jj' vi-jj
