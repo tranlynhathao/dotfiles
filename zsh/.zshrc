@@ -225,8 +225,8 @@ alias lxa="eza --color=always --long --git"
 alias tra="eza -a --tree"
 # ---- END -----
 
-eval $(thefuck --alias)
 # ---- TheFuck -----
+eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 # ---- END -----
 
@@ -240,15 +240,16 @@ alias nv="nvim"
 alias cat="bat --theme=tokyonight_night"
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 alias vf="fd --type f --hidden --exclude .git | fzf --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
+alias pwd="pwd | lolcat"
 
 # v() {
 #     async -q "fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 # }
 
-alias mplist="multipass list | grep -v Deleted"
-alias cls="clear"
 alias pathlist='echo "$PATH" | tr ":" "\n"'
 alias pathuniq='echo "$PATH" | tr ":" "\n" | awk "!seen[\$0]++"'
+alias mplist="multipass list | grep -v Deleted"
+alias cls="clear"
 alias t="touch"
 alias cd="z"
 alias g='/opt/homebrew/bin/g++-14'
@@ -520,4 +521,33 @@ export GPG_TTY=/dev/ttys002
 
 # autoload -Uz compinit && compinit
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$HOME/.mix/escripts:$PATH"
+
+function set_tab_title() {
+  echo -ne "\033]2;${PWD##*/}\007"
+}
+PROMPT_COMMAND="set_tab_title${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# Created by `pipx` on 2025-06-04 13:45:23
+export PATH="$PATH:/Users/tranlynhathao/.local/bin"
+
+# # pnpm
+# export PNPM_HOME="/Users/tranlynhathao/Library/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
+# # pnpm end
+
+# Enable vi mode like vim
+bindkey -v
+
+# Custom keybinding
+bindkey '^L' clear-screen
+# function vi-jj() {
+#   zle vi-cmd-mode
+# }
+# zle -N vi-jj
+bindkey -M viins 'jj' vi-jj
