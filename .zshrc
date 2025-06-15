@@ -546,8 +546,8 @@ bindkey -v
 
 # Custom keybinding
 bindkey '^L' clear-screen
-# function vi-jj() {
-#   zle vi-cmd-mode
-# }
-# zle -N vi-jj
+function vi-jj() {
+  zle vi-cmd-mode
+}
+zle -N vi-jj
 bindkey -M viins 'jj' vi-jj
