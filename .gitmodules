@@ -13,3 +13,9 @@
 [submodule "nvchad-config"]
 	path = nvchad-config
 	url = https://github.com/mgastonportillo/nvchad-config.git
+[submodule ".config/kitty/tmux-sessionizer"]
+	path = .config/kitty/tmux-sessionizer
+	url = https://github.com/jrmoulton/tmux-sessionizer.git
+[submodule ".config/tmux/plugins/tmux-continuum"]
+  path = .config/tmux/plugins/tmux-continuum
+  url = https://github.com/tmux-plugins/tmux-continuum.git
