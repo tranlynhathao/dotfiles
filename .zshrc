@@ -551,3 +551,6 @@ function vi-jj() {
 }
 zle -N vi-jj
 bindkey -M viins 'jj' vi-jj
+
+export CGO_CFLAGS="-I/opt/homebrew/include"
+export CGO_LDFLAGS="-L/opt/homebrew/lib"
