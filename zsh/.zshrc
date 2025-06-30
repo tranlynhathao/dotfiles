@@ -551,3 +551,15 @@ bindkey '^L' clear-screen
 # }
 # zle -N vi-jj
 bindkey -M viins 'jj' vi-jj
+
+export CGO_CFLAGS="-I/opt/homebrew/include"
+export CGO_LDFLAGS="-L/opt/homebrew/lib"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# >>> Nix integration >>>
+if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]; then
+  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+fi
+# <<< Nix integration <<<
