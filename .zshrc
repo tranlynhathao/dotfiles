@@ -232,7 +232,14 @@ eval $(thefuck --alias fk)
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
+# zoxide init zsh | source
 # ---- END ----
+
+cdf() {
+  local dir
+  dir=$(fd --type d --hidden --exclude .git | fzf --height 40% --reverse --prompt="📁 cd into: ") &&
+  cd "$dir"
+}
 
 # ---- ALIAS -----
 alias l="eza --git --icons"
@@ -532,6 +539,7 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # Created by `pipx` on 2025-06-04 13:45:23
 export PATH="$PATH:/Users/tranlynhathao/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 # # pnpm
 # export PNPM_HOME="/Users/tranlynhathao/Library/pnpm"
@@ -554,3 +562,12 @@ bindkey -M viins 'jj' vi-jj
 
 export CGO_CFLAGS="-I/opt/homebrew/include"
 export CGO_LDFLAGS="-L/opt/homebrew/lib"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# >>> Nix integration >>>
+if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]; then
+  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+fi
+# <<< Nix integration <<<

@@ -54,3 +54,5 @@ wireshark/recent_common
 nvim/lazy-lock.json
 
 .openai.env
+
+DOC.md
