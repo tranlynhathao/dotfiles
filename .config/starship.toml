@@ -1,3 +1,9 @@
+# ~/.config/starship.toml
+
+# 🔧 Global settings
+command_timeout = 2000
+
+# ⚙️ Git module settings (optional)
 [git_status]
 disabled = true
 show_sync_status = false
