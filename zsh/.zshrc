@@ -215,7 +215,7 @@ source <(fzf --zsh)
 # ---- END ----
 
 # ----- Bat (better cat) -----
-export BAT_THEME=OneHalfDark
+export BAT_THEME=gruvbox-dark
 # ---- END ----
 
 # ---- Eza (better ls) -----
@@ -232,12 +232,19 @@ eval $(thefuck --alias fk)
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
+# zoxide init zsh | source
 # ---- END ----
+
+cdf() {
+  local dir
+  dir=$(fd --type d --hidden --exclude .git | fzf --height 40% --reverse --prompt="📁 cd into: ") &&
+  cd "$dir"
+}
 
 # ---- ALIAS -----
 alias l="eza --git --icons"
 alias nv="nvim"
-alias cat="bat --theme=tokyonight_night"
+alias cat='bat --theme="Solarized (dark)"'
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 alias vf="fd --type f --hidden --exclude .git | fzf --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 alias pwd="pwd | lolcat"
@@ -259,6 +266,9 @@ alias lg="lazygit"
 alias ll="eza --git --icons -l"
 alias la="eza --git --icons -a"
 alias lla="eza --git --icons -la --bytes"
+
+alias desktop-hide="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias desktop-show="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 # ---- END ----
 
 # ---- THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK ----
@@ -532,6 +542,7 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # Created by `pipx` on 2025-06-04 13:45:23
 export PATH="$PATH:/Users/tranlynhathao/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 # # pnpm
 # export PNPM_HOME="/Users/tranlynhathao/Library/pnpm"
@@ -546,10 +557,10 @@ bindkey -v
 
 # Custom keybinding
 bindkey '^L' clear-screen
-# function vi-jj() {
-#   zle vi-cmd-mode
-# }
-# zle -N vi-jj
+function vi-jj() {
+  zle vi-cmd-mode
+}
+zle -N vi-jj
 bindkey -M viins 'jj' vi-jj
 
 export CGO_CFLAGS="-I/opt/homebrew/include"
@@ -558,8 +569,14 @@ export CGO_LDFLAGS="-L/opt/homebrew/lib"
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
+eval "$(direnv hook zsh)"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # >>> Nix integration >>>
 if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]; then
   . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 fi
 # <<< Nix integration <<<
+
+# pgrep skhd >/dev/null || /opt/homebrew/bin/skhd &

@@ -109,6 +109,8 @@ brew "deno"
 brew "difftastic"
 # File comparison utilities
 brew "diffutils"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # Platform keystore credential helper for Docker
@@ -372,7 +374,7 @@ brew "openjdk@11"
 # Development kit for the Java programming language
 brew "openjdk@17"
 # Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1", link: true
+brew "openssl@1.1"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Render and include figures in Pandoc documents using many plotting toolkits
@@ -391,6 +393,8 @@ brew "php"
 brew "pinentry-mac"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Draw UML diagrams
+brew "plantuml"
 # Fast, disk space efficient package manager
 brew "pnpm"
 # Object-relational database system
@@ -425,6 +429,8 @@ brew "render"
 brew "ripgrep"
 # Command-line tool to batch rename files and directories
 brew "rnr"
+# Utility that provides fast incremental file transfer
+brew "rsync"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -603,6 +609,8 @@ cask "font-sf-pro"
 cask "font-symbols-only-nerd-font"
 # Git client focusing on productivity
 cask "gitkraken"
+# Web browser
+cask "google-chrome"
 # Open Source Multimedia Framework
 cask "gstreamer-development"
 # Open Source Multimedia Framework
@@ -660,13 +668,16 @@ mas "ColorSlurp", id: 1287239339
 mas "Developer", id: 640199958
 mas "Encrypto", id: 935235287
 mas "G App Launcher", id: 1543803459
+mas "Gifski", id: 1351639930
 mas "Grammarly for Safari", id: 1462114288
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Lightshot Screenshot", id: 526298438
 mas "Mate Translate", id: 1005088137
+mas "Messenger", id: 1480068668
 mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
 mas "QR Journal", id: 483820530
 mas "Smart JSON Editor", id: 1268962404
@@ -678,7 +689,6 @@ mas "Trello", id: 1278508951
 mas "Urban VPN Desktop", id: 1517772049
 mas "Vimari", id: 1480933944
 mas "WhatsApp", id: 310633997
-mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "abusaidm.html-snippets"
 vscode "adpyke.codesnap"
