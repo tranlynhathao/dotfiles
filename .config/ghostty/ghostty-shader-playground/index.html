@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GLSL/WebGL Shader Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"
+    ></script>
+    <script>
+      const ws = new WebSocket("ws://localhost:3000");
+      ws.onmessage = (msg) => {
+        if (msg.data === "reload") {
+          location.reload();
+        }
+      };
+    </script>
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+      #playground {
+        display: grid;
+        position: relative;
+        overflow: hidden;
+        gap: 5px;
+        height: 100vh;
+        background: #212638;
+      }
+      ._canvas-wrapper {
+        background: #0b0e14;
+        position: relative;
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+      }
+      canvas {
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+      ._toolbox {
+        position: fixed;
+        padding: 0 6px;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: fit-content;
+        height: 45px;
+        background: white;
+        z-index: 9;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+      ._button {
+        height: 34px;
+        cursor: pointer;
+        min-width: 34px;
+        border: none;
+        background: #c0c6dc;
+        border-radius: 4px;
+      }
+
+      ._button:hover {
+        background: #7d86a3;
+      }
+      select {
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="_toolbox">
+      <button class="_button" onclick="changeCursorType(10,20)">
+        &#10074;
+      </button>
+      <button class="_button" onclick="changeCursorType(1,20)">&#10072;</button>
+      <button class="_button" onclick="changeCursorType(10,1)">&#8213;</button>
+      <button class="_button" onclick="changeMode('auto')">AUTO</button>
+      <button class="_button" onclick="changeMode('rnd')">RND</button>
+      <button class="_button" onclick="changeMode('click')">CLICK</button>
+      <div>
+        <input type="color" id="cursorColor" name="head" value="#ff0000" />
+      </div>
+    </div>
+    <div id="playground"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

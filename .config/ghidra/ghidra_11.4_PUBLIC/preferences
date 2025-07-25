@@ -1,0 +1,22 @@
+#User Preferences
+#Sun Jul 20 03:07:18 GMT+07:00 2025
+G_FILE_CHOOSER.HEIGHT.Select\ File\ to\ Import=1014
+G_FILE_CHOOSER.HEIGHT.Select\ a\ Ghidra\ Project\ Directory=1014
+G_FILE_CHOOSER.VIEW_STYLE.Select\ File\ to\ Import=SimpleView
+G_FILE_CHOOSER.VIEW_STYLE.Select\ a\ Ghidra\ Project\ Directory=SimpleView
+G_FILE_CHOOSER.WIDTH.Select\ File\ to\ Import=1670
+G_FILE_CHOOSER.WIDTH.Select\ a\ Ghidra\ Project\ Directory=1670
+GhidraShowWhatsNew=false
+LAST_USED_OPTIONS_CONFIG=Standard Defaults
+LastImportFile=/Users/tranlynhathao/Downloads/CTF/reversing/public/851.dll
+LastOpenedProject=/Users/tranlynhathao/Downloads/DLL
+ProjectDirectory=/Users/tranlynhathao/Downloads/
+RECENT_0=/Users/tranlynhathao/Downloads/CTF/reversing/public
+RECENT_1=/Users/tranlynhathao/Downloads
+RecentProjects=/Users/tranlynhathao/Downloads/DLL
+SHOW.HELP.NAVIGATION.AID=true
+SHOW_TIPS=true
+TIP_INDEX=10
+Theme=Class\:generic.theme.builtin.MacTheme
+USER_AGREEMENT=ACCEPT
+ViewedProjects=

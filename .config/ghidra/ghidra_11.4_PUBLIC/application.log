@@ -1,0 +1,313 @@
+2025-07-20 02:35:16 INFO  (LoggingInitialization) Using log config file: jar:file:/opt/homebrew/Caskroom/ghidra/11.4-20250620/ghidra_11.4_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2025-07-20 02:35:16 INFO  (LoggingInitialization) Using log file: /Users/tranlynhathao/.config/ghidra/ghidra_11.4_PUBLIC/application.log  
+2025-07-20 02:35:16 INFO  (Preferences) Loading user preferences: /Users/tranlynhathao/.config/ghidra/ghidra_11.4_PUBLIC/preferences  
+2025-07-20 02:35:40 INFO  (ClassSearcher) Searching for classes...  
+2025-07-20 02:35:42 INFO  (ClassSearcher) Class search complete (1175 ms)  
+2025-07-20 02:35:42 INFO  (SSLContextInitializer) Initializing SSL Context  
+2025-07-20 02:35:42 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2025-07-20 02:35:42 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2025-07-20 02:35:42 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2025-07-20 02:35:42 INFO  (GhidraRun) User tranlynhathao started Ghidra.  
+2025-07-20 02:35:42 INFO  (GhidraRun) User settings directory: /Users/tranlynhathao/.config/ghidra/ghidra_11.4_PUBLIC  
+2025-07-20 02:35:42 INFO  (GhidraRun) User temp directory: /var/folders/85/x1zwmt_n01nbrs89f3txmsgw0000gn/T/tranlynhathao-ghidra  
+2025-07-20 02:35:42 INFO  (GhidraRun) User cache directory: /var/tmp/tranlynhathao-ghidra  
+2025-07-20 02:35:42 DEBUG (DefaultProjectManager) No tools found; Installing default tools  
+2025-07-20 02:35:42 DEBUG (DefaultProjectManager) 	no recent project directories found  
+2025-07-20 02:35:43 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2025-07-20 02:35:43 INFO  (GhidraRun) Invalid Project: The specified file is not a project file: --help  
+2025-07-20 02:35:47 INFO  (GhidraRun) Ghidra startup complete (33253 ms)  
+2025-07-20 02:46:29 INFO  (DefaultProject) Creating project: /Users/tranlynhathao/Downloads/DLL  
+2025-07-20 02:46:45 INFO  (FileCacheMaintenanceDaemon) Starting cache cleanup: /var/tmp/tranlynhathao-ghidra/fscache2  
+2025-07-20 02:46:45 INFO  (FileCacheMaintenanceDaemon) Finished cache cleanup, estimated storage used: 0  
+2025-07-20 02:47:24 INFO  (TLSDirectory) TLS callbacks at 24bab3560  
+2025-07-20 02:47:37 INFO  (FileSystemInstanceManager) Removing 4 unused filesystems from cache  
+2025-07-20 02:47:37 DEBUG (FileSystemInstanceManager) Closing unused filesystem [file:///Users/tranlynhathao/Downloads/CTF/reversing/public]  
+2025-07-20 02:47:37 DEBUG (FileSystemInstanceManager) Closing unused filesystem [file:///System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e?MD5=dc6b9b6dce7fbfc34e568b3a31bb9a95]  
+2025-07-20 02:47:37 DEBUG (FileSystemInstanceManager) Closing unused filesystem [file:///System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64?MD5=b1b5051f1d0c3deb40d77a6ef42926c4]  
+2025-07-20 02:47:37 DEBUG (FileSystemInstanceManager) Closing unused filesystem [file:///Library/Java/Extensions]  
+2025-07-20 02:47:39 INFO  (ImporterUtilities) Additional info:
+Loading file:///Users/tranlynhathao/Downloads/CTF/reversing/public/993.dll?MD5=ad4eb025bde8dd4177c85300c997a454...
+------------------------------------------------
+
+Searching 4 paths for library KERNEL32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 4 paths for library MSVCRT.DLL...
+Library not found.
+------------------------------------------------
+
+Linking the External Programs of '993.dll' to imported libraries...
+  [KERNEL32.DLL] -> not found in project
+  [MSVCRT.DLL] -> not found in project
+------------------------------------------------
+
+  
+2025-07-20 02:52:42 DEBUG (ToolTaskManager) Background processing started...  
+2025-07-20 02:52:42 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2025-07-20 02:52:43 INFO  (DWARFImporter) Added 15 source map entries  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF ver[5], 2 compUnits, 166 DIES, import - total elapsed: 65ms  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF data type import - elapsed: 38ms  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF func & symbol import - elapsed: 13ms  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF types imported: 34  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF compile dirs: [/gcc/x86_64-w64-mingw32/libgcc]  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF producers: [GNU AS 2.44, GNU C23 15.1.0 -mtune=generic -march=x86-64 -g -Os -O2 -Os -fbuilding-libgcc -fno-stack-protector]  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF source languages: [DW_LANG_C11, DW_LANG_Mips_Assembler]  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF compUnit: /gcc-15.1.0/libgcc/config/i386/cygwin.S  
+2025-07-20 02:52:43 INFO  (DWARFImportSummary) DWARF compUnit: /gcc-15.1.0/libgcc/libgcc2.c  
+2025-07-20 02:52:43 INFO  (PdbUniversalAnalyzer) Skipping PDB processing: missing PDB information in program metadata  
+2025-07-20 02:52:43 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2025-07-20 02:52:46 INFO  (PackedDatabaseCache) Packed database cache: /var/tmp/tranlynhathao-ghidra/packed-db-cache  
+2025-07-20 02:52:46 DEBUG (PackedDatabaseCache) Caching packed database: /opt/homebrew/Caskroom/ghidra/11.4-20250620/ghidra_11.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/win32/windows_vs12_64.gdt  
+2025-07-20 02:52:46 DEBUG (PackedDatabase) Unpacking database /opt/homebrew/Caskroom/ghidra/11.4-20250620/ghidra_11.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/win32/windows_vs12_64.gdt -> /var/tmp/tranlynhathao-ghidra/packed-db-cache/pdb82375E72/db.1.gbf  
+2025-07-20 02:52:46 DEBUG (PackedDatabaseCache) Cache update completed: /opt/homebrew/Caskroom/ghidra/11.4-20250620/ghidra_11.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/win32/windows_vs12_64.gdt  
+2025-07-20 02:52:47 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: windows_vs12_64  
+2025-07-20 02:52:53 INFO  (AutoAnalysisManager) Analysis Log Messages
+PDB Universal> Warning: Could not find an appropriate PDB file; see log
+  
+2025-07-20 02:52:54 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.213 secs
+    Apply Data Archives                        1.099 secs
+    Call Convention ID                         0.001 secs
+    Call-Fixup Installer                       0.006 secs
+    Create Address Tables                      0.004 secs
+    Create Address Tables - One Time           0.005 secs
+    Create Function                            0.031 secs
+    DWARF                                      0.125 secs
+    Data Reference                             0.005 secs
+    Decompiler Parameter ID                    2.340 secs
+    Decompiler Switch Analysis                 2.421 secs
+    Decompiler Switch Analysis - One Time      0.355 secs
+    Demangler GNU                              0.040 secs
+    Demangler Microsoft                        0.010 secs
+    Disassemble                                0.002 secs
+    Disassemble Entry Points                   0.244 secs
+    Disassemble Entry Points - One Time        0.052 secs
+    Embedded Media                             0.013 secs
+    External Entry References                  0.000 secs
+    Function ID                                0.073 secs
+    Function Start Search                      0.005 secs
+    MinGW Relocations                          0.002 secs
+    Non-Returning Functions - Discovered       0.002 secs
+    Non-Returning Functions - Known            0.024 secs
+    PDB Universal                              0.003 secs
+    Reference                                  0.008 secs
+    Scalar Operand References                  0.010 secs
+    Shared Return Calls                        0.017 secs
+    Stack                                      0.062 secs
+    Subroutine References                      0.006 secs
+    Subroutine References - One Time           0.001 secs
+    WindowsResourceReference                   2.930 secs
+    x86 Constant Reference Analyzer            0.172 secs
+-----------------------------------------------------
+     Total Time   10 secs
+-----------------------------------------------------
+  
+2025-07-20 02:52:54 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2025-07-20 02:52:54 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2025-07-20 02:52:54 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (11.775 secs)  
+2025-07-20 02:52:54 DEBUG (ToolTaskManager) Background processing complete (11.785 secs)  
+2025-07-20 02:56:30 INFO  (RecoveryMgr) Sun Jul 20 02:56:30 GMT+07:00 2025 Recovery snapshot created: /Users/tranlynhathao/Downloads/DLL.rep/idata/00/~00000000.db/snapshotA.grf  
+2025-07-20 03:04:13 INFO  (TLSDirectory) TLS callbacks at 334b63560  
+2025-07-20 03:04:13 INFO  (ImporterUtilities) Additional info:
+Loading file:///Users/tranlynhathao/Downloads/CTF/reversing/public/851.dll?MD5=cf5e36b93941a8d73837a0bef58519d6...
+------------------------------------------------
+
+Searching 4 paths for library KERNEL32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 4 paths for library MSVCRT.DLL...
+Library not found.
+------------------------------------------------
+
+Linking the External Programs of '851.dll' to imported libraries...
+  [KERNEL32.DLL] -> not found in project
+  [MSVCRT.DLL] -> not found in project
+------------------------------------------------
+
+  
+2025-07-20 03:04:26 DEBUG (ToolTaskManager) Background processing started...  
+2025-07-20 03:04:26 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2025-07-20 03:04:27 INFO  (DWARFImporter) Added 15 source map entries  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF ver[5], 2 compUnits, 166 DIES, import - total elapsed: 18ms  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF data type import - elapsed: 14ms  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF func & symbol import - elapsed: 2ms  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF types imported: 34  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF compile dirs: [/gcc/x86_64-w64-mingw32/libgcc]  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF producers: [GNU AS 2.44, GNU C23 15.1.0 -mtune=generic -march=x86-64 -g -Os -O2 -Os -fbuilding-libgcc -fno-stack-protector]  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF source languages: [DW_LANG_C11, DW_LANG_Mips_Assembler]  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF compUnit: /gcc-15.1.0/libgcc/config/i386/cygwin.S  
+2025-07-20 03:04:27 INFO  (DWARFImportSummary) DWARF compUnit: /gcc-15.1.0/libgcc/libgcc2.c  
+2025-07-20 03:04:27 INFO  (PdbUniversalAnalyzer) Skipping PDB processing: missing PDB information in program metadata  
+2025-07-20 03:04:27 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2025-07-20 03:04:30 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/homebrew/Caskroom/ghidra/11.4-20250620/ghidra_11.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/win32/windows_vs12_64.gdt  
+2025-07-20 03:04:30 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: windows_vs12_64  
+2025-07-20 03:04:33 INFO  (AutoAnalysisManager) Analysis Log Messages
+PDB Universal> Warning: Could not find an appropriate PDB file; see log
+  
+2025-07-20 03:04:33 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.012 secs
+    Apply Data Archives                        0.779 secs
+    Call Convention ID                         0.000 secs
+    Call-Fixup Installer                       0.002 secs
+    Create Address Tables                      0.004 secs
+    Create Address Tables - One Time           0.004 secs
+    Create Function                            0.009 secs
+    DWARF                                      0.024 secs
+    Data Reference                             0.004 secs
+    Decompiler Parameter ID                    2.207 secs
+    Decompiler Switch Analysis                 2.321 secs
+    Decompiler Switch Analysis - One Time      0.279 secs
+    Demangler GNU                              0.022 secs
+    Demangler Microsoft                        0.007 secs
+    Disassemble                                0.002 secs
+    Disassemble Entry Points                   0.034 secs
+    Disassemble Entry Points - One Time        0.009 secs
+    Embedded Media                             0.005 secs
+    External Entry References                  0.001 secs
+    Function ID                                0.049 secs
+    Function Start Search                      0.002 secs
+    MinGW Relocations                          0.000 secs
+    Non-Returning Functions - Discovered       0.001 secs
+    Non-Returning Functions - Known            0.006 secs
+    PDB Universal                              0.000 secs
+    Reference                                  0.006 secs
+    Scalar Operand References                  0.004 secs
+    Shared Return Calls                        0.006 secs
+    Stack                                      0.021 secs
+    Subroutine References                      0.005 secs
+    Subroutine References - One Time           0.001 secs
+    WindowsResourceReference                   0.262 secs
+    x86 Constant Reference Analyzer            0.058 secs
+-----------------------------------------------------
+     Total Time   6 secs
+-----------------------------------------------------
+  
+2025-07-20 03:04:33 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2025-07-20 03:04:33 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2025-07-20 03:04:33 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (6.549 secs)  
+2025-07-20 03:04:33 DEBUG (ToolTaskManager) Background processing complete (6.551 secs)  
+2025-07-20 03:05:22 DEBUG (ToolTaskManager) Background processing started...  
+2025-07-20 03:05:22 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2025-07-20 03:05:22 INFO  (DWARFImporter) Added 15 source map entries  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF ver[5], 2 compUnits, 166 DIES, import - total elapsed: 21ms  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF data type import - elapsed: 15ms  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF func & symbol import - elapsed: 4ms  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF types imported: 34  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF compile dirs: [/gcc/x86_64-w64-mingw32/libgcc]  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF producers: [GNU AS 2.44, GNU C23 15.1.0 -mtune=generic -march=x86-64 -g -Os -O2 -Os -fbuilding-libgcc -fno-stack-protector]  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF source languages: [DW_LANG_C11, DW_LANG_Mips_Assembler]  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF compUnit: /gcc-15.1.0/libgcc/config/i386/cygwin.S  
+2025-07-20 03:05:22 INFO  (DWARFImportSummary) DWARF compUnit: /gcc-15.1.0/libgcc/libgcc2.c  
+2025-07-20 03:05:22 INFO  (PdbUniversalAnalyzer) Skipping PDB processing: missing PDB information in program metadata  
+2025-07-20 03:05:22 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2025-07-20 03:05:25 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/homebrew/Caskroom/ghidra/11.4-20250620/ghidra_11.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/win32/windows_vs12_64.gdt  
+2025-07-20 03:05:26 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: windows_vs12_64  
+2025-07-20 03:05:28 INFO  (AutoAnalysisManager) Analysis Log Messages
+PDB Universal> Warning: Could not find an appropriate PDB file; see log
+  
+2025-07-20 03:05:28 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.009 secs
+    Apply Data Archives                        0.625 secs
+    Call Convention ID                         0.000 secs
+    Call-Fixup Installer                       0.001 secs
+    Create Address Tables                      0.003 secs
+    Create Address Tables - One Time           0.007 secs
+    Create Function                            0.012 secs
+    DWARF                                      0.026 secs
+    Data Reference                             0.004 secs
+    Decompiler Parameter ID                    2.162 secs
+    Decompiler Switch Analysis                 2.320 secs
+    Decompiler Switch Analysis - One Time      0.256 secs
+    Demangler GNU                              0.011 secs
+    Demangler Microsoft                        0.006 secs
+    Disassemble                                0.000 secs
+    Disassemble Entry Points                   0.026 secs
+    Disassemble Entry Points - One Time        0.007 secs
+    Embedded Media                             0.003 secs
+    External Entry References                  0.000 secs
+    Function ID                                0.044 secs
+    Function Start Search                      0.004 secs
+    MinGW Relocations                          0.001 secs
+    Non-Returning Functions - Discovered       0.000 secs
+    Non-Returning Functions - Known            0.005 secs
+    PDB Universal                              0.001 secs
+    Reference                                  0.006 secs
+    Scalar Operand References                  0.003 secs
+    Shared Return Calls                        0.006 secs
+    Stack                                      0.032 secs
+    Subroutine References                      0.003 secs
+    Subroutine References - One Time           0.000 secs
+    WindowsResourceReference                   0.262 secs
+    x86 Constant Reference Analyzer            0.043 secs
+-----------------------------------------------------
+     Total Time   5 secs
+-----------------------------------------------------
+  
+2025-07-20 03:05:28 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2025-07-20 03:05:28 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2025-07-20 03:05:28 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (6.209 secs)  
+2025-07-20 03:05:28 DEBUG (ToolTaskManager) Background processing complete (6.21 secs)  
+2025-07-20 03:07:18 DEBUG (ToolTaskManager) Background processing started...  
+2025-07-20 03:07:18 DEBUG (ToolTaskManager) Task Start: Auto Analysis  
+2025-07-20 03:07:18 INFO  (DWARFImporter) Added 15 source map entries  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF ver[5], 2 compUnits, 166 DIES, import - total elapsed: 13ms  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF data type import - elapsed: 8ms  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF func & symbol import - elapsed: 3ms  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF types imported: 34  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF compile dirs: [/gcc/x86_64-w64-mingw32/libgcc]  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF producers: [GNU AS 2.44, GNU C23 15.1.0 -mtune=generic -march=x86-64 -g -Os -O2 -Os -fbuilding-libgcc -fno-stack-protector]  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF source languages: [DW_LANG_C11, DW_LANG_Mips_Assembler]  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF compUnit: /gcc-15.1.0/libgcc/config/i386/cygwin.S  
+2025-07-20 03:07:18 INFO  (DWARFImportSummary) DWARF compUnit: /gcc-15.1.0/libgcc/libgcc2.c  
+2025-07-20 03:07:18 INFO  (PdbUniversalAnalyzer) Skipping PDB processing: missing PDB information in program metadata  
+2025-07-20 03:07:18 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2025-07-20 03:07:21 DEBUG (PackedDatabaseCache) Using cached packed database: /opt/homebrew/Caskroom/ghidra/11.4-20250620/ghidra_11.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/win32/windows_vs12_64.gdt  
+2025-07-20 03:07:21 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: windows_vs12_64  
+2025-07-20 03:07:24 INFO  (AutoAnalysisManager) Analysis Log Messages
+PDB Universal> Warning: Could not find an appropriate PDB file; see log
+  
+2025-07-20 03:07:24 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.007 secs
+    Apply Data Archives                        0.668 secs
+    Call Convention ID                         0.000 secs
+    Call-Fixup Installer                       0.001 secs
+    Create Address Tables                      0.002 secs
+    Create Address Tables - One Time           0.003 secs
+    Create Function                            0.010 secs
+    DWARF                                      0.018 secs
+    Data Reference                             0.069 secs
+    Decompiler Parameter ID                    2.149 secs
+    Decompiler Switch Analysis                 2.313 secs
+    Decompiler Switch Analysis - One Time      0.278 secs
+    Demangler GNU                              0.009 secs
+    Demangler Microsoft                        0.005 secs
+    Disassemble                                0.001 secs
+    Disassemble Entry Points                   0.025 secs
+    Disassemble Entry Points - One Time        0.007 secs
+    Embedded Media                             0.004 secs
+    External Entry References                  0.001 secs
+    Function ID                                0.042 secs
+    Function Start Search                      0.002 secs
+    MinGW Relocations                          0.000 secs
+    Non-Returning Functions - Discovered       0.001 secs
+    Non-Returning Functions - Known            0.005 secs
+    PDB Universal                              0.000 secs
+    Reference                                  0.008 secs
+    Scalar Operand References                  0.006 secs
+    Shared Return Calls                        0.007 secs
+    Stack                                      0.013 secs
+    Subroutine References                      0.005 secs
+    Subroutine References - One Time           0.000 secs
+    WindowsResourceReference                   0.266 secs
+    x86 Constant Reference Analyzer            0.039 secs
+-----------------------------------------------------
+     Total Time   5 secs
+-----------------------------------------------------
+  
+2025-07-20 03:07:24 DEBUG (ToolTaskManager) Start: Auto Analysis  
+2025-07-20 03:07:24 DEBUG (ToolTaskManager) Completed: Auto Analysis (0.0 secs)  
+2025-07-20 03:07:24 DEBUG (ToolTaskManager) Task Completed: Auto Analysis (6.247 secs)  
+2025-07-20 03:07:24 DEBUG (ToolTaskManager) Background processing complete (6.248 secs)  
+2025-07-20 03:11:30 INFO  (RecoveryMgr) Sun Jul 20 03:11:30 GMT+07:00 2025 Recovery snapshot created: /Users/tranlynhathao/Downloads/DLL.rep/idata/00/~00000001.db/snapshotA.grf  
