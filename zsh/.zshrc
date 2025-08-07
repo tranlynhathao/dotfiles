@@ -248,6 +248,7 @@ alias cat='bat --theme="Solarized (dark)"'
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 alias vf="fd --type f --hidden --exclude .git | fzf --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"
 alias pwd="pwd | lolcat"
+alias sagesafe='TERM=xterm sage -python'
 
 # v() {
 #     async -q "fd --type f --hidden --exclude .git | fzf-tmux -m -p --reverse --preview='bat --color=always {}' --preview-window=right:70%:wrap | xargs nvim"

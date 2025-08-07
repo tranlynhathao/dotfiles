@@ -18,7 +18,7 @@ alt - right : /opt/homebrew/bin/yabai -m window --focus stack.next
 ############################
 # Focus on the Recent Window
 ############################
-alt - u : ~/.local/bin/focus_recent
+alt - r : ~/.local/bin/focus_recent
 
 #########################################################
 # Change focus between external displays (left and right)
