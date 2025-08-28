@@ -270,6 +270,8 @@ alias lla="eza --git --icons -la --bytes"
 
 alias desktop-hide="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias desktop-show="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+alias save_kitty="kitty --session ~/.config/kitty/last-session.conf"
 # ---- END ----
 
 # ---- THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK ----
@@ -342,9 +344,9 @@ if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
     if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
+# . "/opt/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
     else
-        export PATH="/opt/anaconda3/bin:$PATH"
+# export PATH="/opt/anaconda3/bin:$PATH"  # commented out by conda initialize
     fi
 fi
 unset __conda_setup
@@ -390,6 +392,8 @@ eval "$(atuin init zsh)"
 
 # alias python="python3"
 alias code="'/Applications/Visual Studio Code .app/Contents/Resources/app/bin/code'"
+
+alias vtget='aria2c -x 32 -s 32 -k 1M --file-allocation=none --max-tries=0 --retry-wait=1 --auto-file-renaming=false'
 
 # ---- fetch OS -----
 # neofetch
@@ -581,3 +585,25 @@ fi
 # <<< Nix integration <<<
 
 # pgrep skhd >/dev/null || /opt/homebrew/bin/skhd &
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/Library/Python/3.13/bin:$PATH"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="/opt/homebrew/opt/libarchive/bin:$PATH"

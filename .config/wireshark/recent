@@ -141,7 +141,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: false
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /Users/tranlynhathao/Downloads/CTF/misc_forensic/
+gui.fileopen_remembered_dir: /Volumes/WD/tech_tutorial/computer_security/CTF_BLACKPINKER/HMCUS-CTF/HCMUS-CTF-2025/Final/forensic/StrangePacket/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.

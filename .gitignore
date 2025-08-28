@@ -56,3 +56,6 @@ nvim/lazy-lock.json
 .openai.env
 
 DOC.md
+
+# ignore rclone config
+rclone.conf

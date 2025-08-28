@@ -13,22 +13,26 @@ recent.capture_file: /Users/tranlynhathao/Desktop/CNTT_CLC/N1_K3/MMT/wireshark/2
 recent.capture_file: /Users/tranlynhathao/Downloads/CTF/capture.pcap
 recent.capture_file: /Users/tranlynhathao/Downloads/CTF/trash.pcap
 recent.capture_file: /Users/tranlynhathao/Downloads/CTF/misc_forensic/trash.pcap
+recent.capture_file: /Volumes/WD/tech_tutorial/computer_security/CTF_BLACKPINKER/HMCUS-CTF/HCMUS-CTF-2025/Final/forensic/StrangePacket/challenge.pcapng
 
 ######## Recent capture filters (latest first), cannot be altered through command line ########
 
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
+recent.display_filter: tcp
+recent.display_filter: http
+
+recent.display_filter: tcp && !tls && !openvpn
+recent.display_filter: tcp && !tls && !openvpn
+
+recent.display_filter: data
+
 recent.display_filter: smb
 recent.display_filter: tcp contains "flag" || data contains "flag"
 recent.display_filter: smb2
 recent.display_filter: ftp-data
 recent.display_filter: http
-recent.display_filter: tcp.port == 21 || tcp.port == 80 || tcp.port == 445
-recent.display_filter: tcp.analysis.retransmission
-recent.display_filter: tcp.analysis.retransmission
-recent.display_filter: tcp
-recent.display_filter: tcp.flags.fin == 1
 
 # Main window geometry.
 # Decimal numbers.
