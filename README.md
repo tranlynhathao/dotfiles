@@ -28,7 +28,7 @@
 - Launcher: [Raycast](https://www.raycast.com/)
 - Colorscheme: [gruvbox](https://github.com/morhetz/gruvbox) (via kitty & neovim theme)
 
-## 📁 Structure
+## Structure
 
 ```bash
 dotfiles/
@@ -43,7 +43,7 @@ dotfiles/
 └── README.md               # This file
 ````
 
-## 🔌 Submodules
+## Submodules
 
 This repository uses [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to manage large or external configs like Neovim.
 
@@ -61,7 +61,7 @@ If you’ve already cloned it:
 git submodule update --init --recursive
 ```
 
-## 🔗 How to Use
+## How to Use
 
 ### 1. Create symlinks
 
@@ -81,7 +81,7 @@ ln -s ~/dotfiles/nvim ~/.config/nvim
 - Shell: [Fish](https://fishshell.com/) or [Zsh](https://www.zsh.org/)
 - Prompt: [Starship](https://starship.rs/)
 
-## ⚙️  Tools & Technologies
+## Tools & Technologies
 
 - [Neovim](https://neovim.io/) (with [NvChad](https://nvchad.com/))
 - [tmux](https://github.com/tmux/tmux)
@@ -89,11 +89,11 @@ ln -s ~/dotfiles/nvim ~/.config/nvim
 - [Fish shell](https://fishshell.com/) / [Zsh](https://www.zsh.org/)
 - [Starship prompt](https://starship.rs/)
 
-## 🧠 Philosophy
+## Philosophy
 
 Each tool is modularized and easy to maintain. This setup aims to be fast, aesthetic, and minimal while remaining highly customizable.
 
-## 🧼 Remove Submodule (if needed)
+## Remove Submodule (if needed)
 
 ```bash
 git submodule deinit -f nvim
@@ -101,11 +101,11 @@ git rm -f nvim
 rm -rf .git/modules/nvim
 ```
 
-## 📬 Feedback & Issues
+## Feedback & Issues
 
 Feel free to fork, raise an issue, or reach out if you want to suggest improvements.
 
-## 📜 License
+## License
 
 [MIT License](https://github.com/tranlynhathao/dotfiles?tab=MIT-1-ov-file)
 <!-- [MIT License](./LICENSE) -->
