@@ -31,6 +31,8 @@ brew "giflib"
 brew "libpng"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
 # New file format for still image compression
 brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
@@ -43,6 +45,8 @@ brew "cairo"
 brew "harfbuzz"
 # Tool for reverse engineering 3rd party, closed, binary Android apps
 brew "apktool"
+# Download with resuming and segmented downloading
+brew "aria2"
 # C++ template library for linear algebra
 brew "eigen"
 # GNU multiple precision arithmetic library
@@ -53,6 +57,8 @@ brew "gcc"
 brew "git"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
+# Multi-format archive and compression library
+brew "libarchive"
 # Framework for layout and rendering of i18n text
 brew "pango"
 # OCR (Optical Character Recognition) engine
@@ -79,6 +85,8 @@ brew "bash"
 brew "bat"
 # GNU binary tools for native development
 brew "binutils"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
 # Searches a binary image for embedded files and executable code
 brew "binwalk"
 # Parser generator
@@ -99,6 +107,10 @@ brew "capstone"
 brew "carapace"
 # Rich and complete approach to parallelism in C++
 brew "tbb"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Tool to obtain certs from Let's Encrypt and autoenable HTTPS
+brew "certbot"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Ruby environment tool
@@ -147,8 +159,6 @@ brew "imagemagick"
 brew "lua"
 # Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Fast DVI to SVG converter
 brew "dvisvgm"
 # Spell checker and morphological analyzer
@@ -399,6 +409,8 @@ brew "neofetch"
 brew "utf8proc", args: ["HEAD"]
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+brew "nginx"
 # Web server scanner
 brew "nikto"
 # Statically typed compiled systems programming language
@@ -425,6 +437,8 @@ brew "nvtop"
 brew "ollama", link: false
 # Command-line Git information tool
 brew "onefetch"
+# Utility that provides fast incremental file transfer
+brew "rsync"
 # OCaml package manager
 brew "opam"
 # Toolkit for 3D computer graphics, image processing, and visualization
@@ -437,6 +451,8 @@ brew "openjdk@11"
 brew "openjdk@17"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
+# SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
+brew "openvpn"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Render and include figures in Pandoc documents using many plotting toolkits
@@ -491,6 +507,8 @@ brew "raylib"
 brew "ruby-build"
 # Ruby version manager
 brew "rbenv"
+# Rsync for cloud storage
+brew "rclone"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
 # Persistent key-value database, with built-in net interface
@@ -505,8 +523,6 @@ brew "ripgrep"
 brew "rizin"
 # Command-line tool to batch rename files and directories
 brew "rnr"
-# Utility that provides fast incremental file transfer
-brew "rsync"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
@@ -679,16 +695,22 @@ cask "amethyst"
 cask "audacity"
 # Desktop password and login vault
 cask "bitwarden"
+# Monitors common persistence locations
+cask "blockblock"
 # Web security testing toolkit
 cask "burp-suite"
 # Text editor
 cask "coda"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Reverse engineering platform powered by Rizin
 cask "cutter"
 # API documentation browser and code snippet manager
 cask "dash"
 # Utilities designed to make common development tasks easier
 cask "devtoys"
+# Developer platform
+cask "dotnet-runtime"
 # Sci-fi themed terminal emulator and system monitor
 cask "edex-ui"
 # UI toolkit for building applications for mobile, web and desktop
@@ -727,14 +749,20 @@ cask "itsycal"
 cask "j"
 # Keyboard customiser
 cask "karabiner-elements"
+# File archiver
+cask "keka"
 # GPU-based terminal emulator
 cask "kitty"
+# Tool to show what is persistently installed on the computer
+cask "knockknock"
 # Couchbase Lite Libraries for C and C++ (Enterprise Edition)
 cask "libcblite"
 # Clipboard manager
 cask "maccy"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
+# Open source intelligence and graphical link analysis tool
+cask "maltego"
 # Penetration testing framework
 cask "metasploit"
 # Minimal installer for conda specific to conda-forge
@@ -760,6 +788,8 @@ cask "sf-symbols"
 cask "temurin"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin@11"
+# Virtual machines UI using QEMU
+cask "utm"
 # Tool to hide menu bar icons
 cask "vanilla"
 # Open-source code editor
@@ -803,7 +833,6 @@ vscode "akamud.vscode-theme-onedark"
 vscode "aliariff.vscode-erb-beautify"
 vscode "anseki.vscode-color"
 vscode "anysphere.cursorpyright"
-vscode "anysphere.pyright"
 vscode "atishay-jain.all-autocomplete"
 vscode "augment.vscode-augment"
 vscode "batisteo.vscode-django"
@@ -885,8 +914,10 @@ vscode "jmrog.vscode-nuget-package-manager"
 vscode "jock.svg"
 vscode "johnpapa.angular2"
 vscode "johnpapa.vscode-peacock"
+vscode "josemurilloc.aura-spirit-dracula"
 vscode "kevinrose.vsc-python-indent"
 vscode "kreativ-software.csharpextensions"
+vscode "lakshits11.best-themes-redefined"
 vscode "luanpotter.dart-import"
 vscode "mechatroner.rainbow-csv"
 vscode "meezilla.json"
@@ -928,7 +959,6 @@ vscode "ms-ossdata.vscode-pgsql"
 vscode "ms-ossdata.vscode-postgresql"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
 vscode "ms-python.vscode-python-envs"
 vscode "ms-toolsai.datawrangler"
 vscode "ms-toolsai.jupyter"
@@ -993,10 +1023,12 @@ vscode "streetsidesoftware.code-spell-checker"
 vscode "stxr.iconfont-preview"
 vscode "subframe7536.custom-ui-style"
 vscode "surajbarkale.ninja"
+vscode "svelte.svelte-vscode"
 vscode "swellaby.vscode-rust-test-adapter"
 vscode "tal7aouy.theme"
 vscode "tamasfe.even-better-toml"
 vscode "teamsdevapp.vscode-ai-foundry"
+vscode "tecosaur.latex-utilities"
 vscode "thekalinga.bootstrap4-vscode"
 vscode "tomoki1207.pdf"
 vscode "tushortz.pygame-snippets"

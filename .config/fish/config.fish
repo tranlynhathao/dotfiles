@@ -109,3 +109,6 @@ set __fish_git_prompt_char_upstream_prefix ' '
 set fish_prompt_pwd_dir_length 0
 
 # fish_prompt defined in ~/.config/fish/functions/fish_prompt.fish
+
+# Generated for envman. Do not edit.
+test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
