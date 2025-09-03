@@ -19,6 +19,18 @@
 [submodule ".config/tmux/plugins/tmux-continuum"]
   path = .config/tmux/plugins/tmux-continuum
   url = https://github.com/tmux-plugins/tmux-continuum.git
+[submodule ".config/tmux/plugins/tmux-floax"]
+  path = .config/tmux/plugins/tmux-floax
+  url = https://github.com/omerxx/tmux-floax.git
+[submodule ".config/tmux/plugins/tmux-fzf"]
+  path = .config/tmux/plugins/tmux-fzf
+  url = https://github.com/sainnhe/tmux-fzf.git
 [submodule ".config/base16-shell"]
 	path = .config/base16-shell
 	url = https://github.com/chriskempson/base16-shell
+[submodule "another/omerxx"]
+	path = another/omerxx
+	url = https://github.com/omerxx/dotfiles.git
+[submodule "another/kunkka19xx"]
+	path = another/kunkka19xx
+	url = https://github.com/kunkka19xx/dotfiles.git
