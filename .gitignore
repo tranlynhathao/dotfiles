@@ -72,3 +72,5 @@ rclone.conf
 
 # coc.nvim cache
 .config/coc/
+
+.secrets.baseline
