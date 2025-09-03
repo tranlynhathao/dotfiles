@@ -59,3 +59,13 @@ DOC.md
 
 # ignore rclone config
 rclone.conf
+
+# Ignore Raycast extensions
+.config/raycast/extensions/
+.config/xbuild/
+.config/flutter/tool_state
+.config/GameMakerStudio2/
+
+# Ignore coc extensions (plugin cache)
+.config/coc/extensions/
+.config/coc/extensions/
