@@ -69,3 +69,6 @@ rclone.conf
 # Ignore coc extensions (plugin cache)
 .config/coc/extensions/
 .config/coc/extensions/
+
+# coc.nvim cache
+.config/coc/
