@@ -22,7 +22,9 @@
 #
 # Cycles are not allowed. If a cycle is detected, an error will be logged and
 # the configuration file will be ignored.
-config-file = ghostty-theme
+# config-file = ghostty-theme
+
+theme = catppuccin-latte.conf
 
 # Some shaders can be found in this repo, they're usually uploaded to discord
 # https://github.com/hackrmomo/ghostty-shaders
@@ -63,8 +65,8 @@ config-file = ghostty-theme
 # custom-shader = shaders/water.glsl
 # custom-shader = shaders/cursor_blaze.glsl
 # custom-shader = shaders/cursor_blaze_no_trail.glsl
-custom-shader = shaders/cursor_smear.glsl
-# custom-shader = shaders/cursor_smear_fade.glsl
+# custom-shader = shaders/cursor_smear.glsl
+custom-shader = shaders/cursor_smear_fade.glsl
 
 # The command to run, usually a shell. If this is not an absolute path, it'll
 # be looked up in the `PATH`. If this is not set, a default will be looked up
@@ -144,8 +146,25 @@ window-padding-x = 4,2
 # `window-padding-y = 2` will set both paddings to 2.
 window-padding-y = 6,0
 
-font-family = "JetBrainsMono Nerd Font"
+window-decoration = true
+macos-option-as-alt = true
+
+# font-family = "JetBrainsMono Nerd Font"
+font-family = "Inconsolata Nerd Font Mono Bold"
 font-size = 15
+
+background-opacity = 0.94
+background-blur-radius = 94
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = hidden
+title = ""
+cursor-opacity = 0.65
+adjust-cursor-thickness = 2
+# window-decoration = false
+gtk-titlebar = false
+# background-image = ~/nix/modules/bg/nix-bg.png
+# background-image-fit = cover
+# background-image-opacity = 0.02
 
 # Valid values:
 #
@@ -219,7 +238,7 @@ macos-option-as-alt = right
 # Set it to 0 to disable animation completely. This can be changed at
 # runtime.
 # quick-terminal-animation-duration = 0.1
-quick-terminal-animation-duration = 0.08
+quick-terminal-animation-duration = 0.05
 # quick-terminal-animation-duration = 0
 
 keybind = super+i=inspector:toggle

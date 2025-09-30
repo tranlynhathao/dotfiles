@@ -1,4 +1,4 @@
-# Common recent settings file for Wireshark 4.4.8.
+# Common recent settings file for Wireshark 4.4.9.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -22,12 +22,9 @@ recent.capture_file: /Volumes/WD/tech_tutorial/computer_security/CTF_BLACKPINKER
 
 recent.display_filter: tcp
 recent.display_filter: http
-
 recent.display_filter: tcp && !tls && !openvpn
 recent.display_filter: tcp && !tls && !openvpn
-
 recent.display_filter: data
-
 recent.display_filter: smb
 recent.display_filter: tcp contains "flag" || data contains "flag"
 recent.display_filter: smb2

@@ -41,7 +41,20 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="agnoster"
+# ZSH_THEME="bira"
+# ZSH_THEME="avit"
+# ZSH_THEME="ys"
+# ZSH_THEME="clean"
+
+# ---- gitstatus prompt ----
+source ~/.gitstatus/gitstatus.plugin.zsh
+
+PROMPT='%F{green}%n@%m%f %F{blue}%~%f ${GITSTATUS_PROMPT} %# '
+# ---- END ----
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -108,7 +121,12 @@ plugins=(
   web-search
   zsh-autosuggestions
   zsh-syntax-highlighting
-  # zsh-async
+  bundler
+  dotenv
+  macos
+  rake
+  rbenv
+  ruby
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -391,7 +409,7 @@ eval "$(atuin init zsh)"
 # ---- END -----
 
 # alias python="python3"
-alias code="'/Applications/Visual Studio Code .app/Contents/Resources/app/bin/code'"
+# alias code="'/Applications/Visual Studio Code .app/Contents/Resources/app/bin/code'"
 
 alias vtget='aria2c -x 32 -s 32 -k 1M --file-allocation=none --max-tries=0 --retry-wait=1 --auto-file-renaming=false'
 
@@ -593,17 +611,32 @@ export PATH="$HOME/Library/Python/3.13/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/tranlynhathao/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/tranlynhathao/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/tranlynhathao/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/anaconda3/bin:$PATH"
+        export PATH="/Users/tranlynhathao/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="/opt/homebrew/opt/libarchive/bin:$PATH"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba shell init' !!
+export MAMBA_EXE='/Users/tranlynhathao/miniforge3/bin/mamba';
+export MAMBA_ROOT_PREFIX='/Users/tranlynhathao/miniforge3';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
