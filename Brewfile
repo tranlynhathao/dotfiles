@@ -20,12 +20,12 @@ tap "oven-sh/bun"
 tap "riscv/riscv"
 tap "sass/sass"
 tap "sergiobenitez/osxct"
-# Utility for manipulating APFS and ZFS compressed files
-brew "afsctool"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Library for command-line editing
 brew "readline"
+# Utility for manipulating APFS and ZFS compressed files
+brew "afsctool"
 # Next-generation aircrack with lots of new features
 brew "aircrack-ng"
 # Library and utilities for processing GIFs
@@ -120,6 +120,8 @@ brew "byobu"
 brew "ghc"
 # Command-line interface for Cabal and Hackage
 brew "cabal-install"
+# New generation algebraic specification and programming language
+brew "cafeobj"
 # Multi-platform, multi-architecture disassembly framework
 brew "capstone"
 # Multi-shell multi-command argument completer
@@ -200,7 +202,7 @@ brew "elixir"
 brew "tree-sitter"
 # GNU Emacs text editor
 brew "emacs"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # LLVM bytecode to JavaScript compiler
 brew "emscripten"
@@ -252,6 +254,8 @@ brew "gawk"
 brew "gdb"
 # GitHub command-line tool
 brew "gh"
+# Multi-platform software reverse engineering framework
+brew "ghidra"
 # GIF image/animation creator/editor
 brew "gifsicle"
 # Syntax-highlighting pager for git and diff output
@@ -328,6 +332,8 @@ brew "hydra"
 brew "hyperfine"
 # Interactive Genomics Viewer
 brew "igv"
+# Dex to Java decompiler
+brew "jadx"
 # Extendable open source continuous integration server
 brew "jenkins-lts", restart_service: :changed
 # Manage your Java environment
@@ -366,6 +372,8 @@ brew "libffi"
 brew "libopusenc"
 # Postgres C API library
 brew "libpq"
+# LLM inference in C/C++
+brew "llama.cpp"
 # LLVM Project Linker
 brew "lld"
 # Access large language models from the command-line
@@ -452,6 +460,8 @@ brew "nushell"
 brew "nvm"
 # Interactive GPU process monitor
 brew "nvtop"
+# Prompt theme engine for any shell
+brew "oh-my-posh"
 # Create, run, and share large language models (LLMs)
 brew "ollama", link: false
 # Command-line Git information tool
@@ -468,6 +478,8 @@ brew "opencv", link: false
 brew "openjdk@11"
 # Development kit for the Java programming language
 brew "openjdk@17"
+# Development kit for the Java programming language
+brew "openjdk@21"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
 # SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
@@ -566,6 +578,8 @@ brew "sdl2_ttf"
 brew "sevenzip"
 # Multi-media library with bindings for multiple languages
 brew "sfml@2", link: true
+# Forensic toolkit
+brew "sleuthkit"
 # Yet another network load monitor
 brew "slurm"
 # SOund eXchange: universal sound sample translator
@@ -684,8 +698,6 @@ brew "felixkratz/formulae/sketchybar"
 brew "go-task/tap/go-task"
 # Packer
 brew "hashicorp/tap/packer"
-# Prompt theme engine for any shell
-brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 # Simple command-line snippet manager
 brew "knqyf263/pet/pet"
 # Simple hotkey-daemon for macOS.
@@ -768,6 +780,8 @@ cask "istat-menus"
 cask "itsycal"
 # Programming language for mathematical, statistical and logical analysis of data
 cask "j"
+# Statistical software
+cask "jamovi"
 # Keyboard customiser
 cask "karabiner-elements"
 # File archiver
@@ -817,6 +831,8 @@ cask "vanilla"
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
+# Compatibility layer to run Windows applications
+cask "wine-stable"
 # HTML to PDF renderer
 cask "wkhtmltopdf"
 # Free and open source web app scanner
@@ -828,7 +844,6 @@ mas "ColorSlurp", id: 1287239339
 mas "Developer", id: 640199958
 mas "Encrypto", id: 935235287
 mas "Gifski", id: 1351639930
-mas "Grammarly for Safari", id: 1462114288
 mas "Keynote", id: 409183694
 mas "Lightshot Screenshot", id: 526298438
 mas "Messenger", id: 1480068668
@@ -861,6 +876,7 @@ vscode "bierner.markdown-mermaid"
 vscode "blackboxapp.blackbox"
 vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
+vscode "canhminhdo.cafeobj"
 vscode "castwide.solargraph"
 vscode "christian-kohler.npm-intellisense"
 vscode "christian-kohler.path-intellisense"
@@ -888,6 +904,7 @@ vscode "docker.docker"
 vscode "donjayamanne.githistory"
 vscode "dotjoshjohnson.xml"
 vscode "dsznajder.es7-react-js-snippets"
+vscode "duongtd.cafe"
 vscode "dustypomerleau.rust-syntax"
 vscode "dzhavat.css-flexbox-cheatsheet"
 vscode "eamodio.gitlens"
