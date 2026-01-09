@@ -11,4 +11,3 @@ function lazy_conda() {
   eval "$__conda_setup"
 }
 alias lazy_conda=lazy_conda
-

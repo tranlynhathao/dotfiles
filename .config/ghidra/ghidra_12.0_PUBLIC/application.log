@@ -1,0 +1,43 @@
+2025-12-22 17:10:31 INFO  (LoggingInitialization) Using log config file: jar:file:/Users/tranlynhathao/Downloads/ghidra_12.0_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2025-12-22 17:10:31 INFO  (LoggingInitialization) Using log file: /Users/tranlynhathao/.config/ghidra/ghidra_12.0_PUBLIC/application.log  
+2025-12-22 17:10:31 INFO  (Preferences) Loading user preferences: /Users/tranlynhathao/.config/ghidra/ghidra_12.0_PUBLIC/preferences  
+2025-12-22 17:10:31 INFO  (Preferences) Loading previous preferences: /Users/tranlynhathao/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences  
+2025-12-22 17:10:36 INFO  (ClassSearcher) Searching for classes...  
+2025-12-22 17:10:37 INFO  (ClassSearcher) Class search complete (909 ms)  
+2025-12-22 17:10:37 INFO  (SSLContextInitializer) Initializing SSL Context  
+2025-12-22 17:10:37 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2025-12-22 17:10:37 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2025-12-22 17:10:37 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2025-12-22 17:10:37 INFO  (GhidraRun) User tranlynhathao started Ghidra.  
+2025-12-22 17:10:37 INFO  (GhidraRun) User settings directory: /Users/tranlynhathao/.config/ghidra/ghidra_12.0_PUBLIC  
+2025-12-22 17:10:37 INFO  (GhidraRun) User temp directory: /var/folders/85/x1zwmt_n01nbrs89f3txmsgw0000gn/T/tranlynhathao-ghidra  
+2025-12-22 17:10:37 INFO  (GhidraRun) User cache directory: /var/tmp/tranlynhathao-ghidra  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) No tools found; Installing default tools  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) Found the following default tools:   
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) -Debugger - defaultTools/Debugger.tool  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) -CodeBrowser - defaultTools/CodeBrowser.tool  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) -Version Tracking - defaultTools/VersionTracking.tool  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) -Emulator - defaultTools/Emulator.tool  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) Found existing tools; merging existing tools:   
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) -Debugger - /Users/tranlynhathao/.config/ghidra/ghidra_11.4.2_PUBLIC/tools/_debugger.tcd  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) -CodeBrowser - /Users/tranlynhathao/.config/ghidra/ghidra_11.4.2_PUBLIC/tools/_code_browser.tcd  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) -Version Tracking - /Users/tranlynhathao/.config/ghidra/ghidra_11.4.2_PUBLIC/tools/_version _tracking.tcd  
+2025-12-22 17:10:37 DEBUG (DefaultProjectManager) -Emulator - /Users/tranlynhathao/.config/ghidra/ghidra_11.4.2_PUBLIC/tools/_emulator.tcd  
+2025-12-22 17:10:38 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2025-12-22 17:10:38 INFO  (GhidraRun) Ghidra startup complete (7903 ms)  
+2025-12-24 12:21:46 INFO  (LoggingInitialization) Using log config file: jar:file:/Volumes/SS990PRO/APP_TOOLS/ghidra_12.0_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2025-12-24 12:21:46 INFO  (LoggingInitialization) Using log file: /Users/tranlynhathao/.config/ghidra/ghidra_12.0_PUBLIC/application.log  
+2025-12-24 12:21:46 INFO  (Preferences) Loading user preferences: /Users/tranlynhathao/.config/ghidra/ghidra_12.0_PUBLIC/preferences  
+2025-12-24 12:21:46 INFO  (Preferences) Loading previous preferences: /Users/tranlynhathao/.config/ghidra/ghidra_11.4.2_PUBLIC/preferences  
+2025-12-24 12:21:46 INFO  (ClassSearcher) Searching for classes...  
+2025-12-24 12:21:48 INFO  (ClassSearcher) Class search complete (1871 ms)  
+2025-12-24 12:21:49 INFO  (SSLContextInitializer) Initializing SSL Context  
+2025-12-24 12:21:49 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2025-12-24 12:21:49 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2025-12-24 12:21:49 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2025-12-24 12:21:50 INFO  (GhidraRun) User tranlynhathao started Ghidra.  
+2025-12-24 12:21:50 INFO  (GhidraRun) User settings directory: /Users/tranlynhathao/.config/ghidra/ghidra_12.0_PUBLIC  
+2025-12-24 12:21:50 INFO  (GhidraRun) User temp directory: /var/folders/85/x1zwmt_n01nbrs89f3txmsgw0000gn/T/tranlynhathao-ghidra  
+2025-12-24 12:21:50 INFO  (GhidraRun) User cache directory: /var/tmp/tranlynhathao-ghidra  
+2025-12-24 12:21:50 DEBUG (RecoverySnapshotMgrPlugin) Recovery snapshot timer set to 5 minute(s)  
+2025-12-24 12:21:50 INFO  (GhidraRun) Ghidra startup complete (5369 ms)  
