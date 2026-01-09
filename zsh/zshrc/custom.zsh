@@ -11,4 +11,3 @@ cpp() {
     shift
     g "$@" -o "$output_file" && ./"$output_file"
 }
-

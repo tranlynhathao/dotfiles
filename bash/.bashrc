@@ -428,7 +428,7 @@ if [ "$DISTRIBUTION" = "redhat" ] || [ "$DISTRIBUTION" = "arch" ]; then
       alias cat='bat'
 else
       alias cat='batcat'
-fi 
+fi
 
 # Show the current version of the operating system
 ver() {

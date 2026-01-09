@@ -1,0 +1,4 @@
+theme = /Users/tranlynhathao/.local/share/nvim/lazy/tokyonight.nvim/extras/ghostty/tokyonight_storm
+
+
+# vim: ft=config

@@ -74,3 +74,26 @@ rclone.conf
 .config/coc/
 
 .secrets.baseline
+
+# API Keys & Secrets
+.openai.env
+**/secret*
+**/secrets*
+**/*secret*
+**/*_secret
+**/token*
+**/*token*
+**/*key*.json
+**/credentials*.json
+
+# Google Cloud
+.config/gcloud/
+**/.boto
+**/adc.json
+**/access_tokens.db
+**/credentials.db
+**/default_configs.db
+
+# SSH keys
+**/.ssh/id_*
+**/.ssh/*.pem

@@ -1,0 +1,12 @@
+font-family = Cascadia Code
+font-style = SemiLight
+font-style-bold = Bold
+font-style-italic = SemiLight Italic
+font-style-bold-italic = Bold Italic
+font-feature = calt
+font-feature = ss01
+adjust-cell-height = 12
+adjust-cursor-height = 12
+
+
+# vim: ft=config

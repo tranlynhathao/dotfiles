@@ -3,6 +3,8 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
+export OPENAI_API_KEY="${OPENAI_API_KEY}"
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -27,6 +29,11 @@ alias nskhd="nvim ~/.config/skhd/"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:$PATH"
+
+# ---- Rust/Cargo (rustup) ----
+# Prioritize rustup cargo over homebrew cargo for toolchain support
+export PATH="$HOME/.cargo/bin:$PATH"
+# ---- END ----
 
 # ---- homebrew ----
 # export PATH="/usr/local/bin:$PATH" # if chip intel
@@ -252,6 +259,8 @@ eval $(thefuck --alias fk)
 eval "$(zoxide init zsh)"
 # zoxide init zsh | source
 # ---- END ----
+
+eval "$(pyenv virtualenv-init -)"
 
 cdf() {
   local dir
@@ -611,14 +620,14 @@ export PATH="$HOME/Library/Python/3.13/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/tranlynhathao/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/tranlynhathao/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/tranlynhathao/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/tranlynhathao/miniforge3/bin:$PATH"
+        export PATH="/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -640,3 +649,11 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/tranlynhathao/.antigravity/antigravity/bin:$PATH"
+export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig"
+
+export PATH="$HOME/Library/SageMath-10-8/bin:$PATH"
+export PYTHONPATH="$HOME/Library/SageMath-10-8/lib/python3.13/site-packages:$PYTHONPATH"
