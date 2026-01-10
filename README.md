@@ -1,111 +1,412 @@
 <div align="center">
 
-# 🛠️ My Dotfiles
+# Dotfiles
 
-> Personal configuration files for a clean, consistent, and powerful development environment on macOS (or Linux).
+**Personal configuration files for a clean, consistent, and powerful development environment on macOS**
+
+---
 
 </div>
 
-## Informations
+## Table of Contents
 
-<img alt="screenshot" align="right" width="400px" src="img/fastfetch.png"/>
+- [Overview](#overview)
+- [System Information](#system-information)
+- [Repository Structure](#repository-structure)
+- [Quick Start](#quick-start)
+- [Installation Guide](#installation-guide)
+- [Configuration Details](#configuration-details)
+- [Tools & Technologies](#tools--technologies)
+- [Customization](#customization)
+- [Maintenance](#maintenance)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
 
-<!-- - OS: [macOS Sequoia](https://www.apple.com/vn/macos/macos-sequoia/) -->
-<!-- - WM: [sway](https://swaywm.org/) -->
-<!-- - Shell: [fish](https://fishshell.com/) -->
-<!-- - Editor: [neovim](https://neovim.io/) -->
-<!-- - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/) -->
-<!-- - Browser: [firefox](https://www.mozilla.org/en-US/firefox/) -->
-<!-- - Launcher: [rofi](https://github.com/davatorium/rofi), [wayland fork](https://github.com/lbonn/rofi) -->
-<!-- - Bar: [waybar](https://github.com/Alexays/Waybar) -->
-<!-- - Colorscheme: [gruvbox](https://github.com/morhetz/gruvbox) -->
-- OS: [macOS Sequoia](https://www.apple.com/macos/macos-sequoia/)
-- Hardware: [Apple M1 Pro](https://www.apple.com/newsroom/2021/10/introducing-m1-pro-and-m1-max-the-most-powerful-chips-apple-has-ever-built/)
-- Shell: [fish](https://fishshell.com/)
-- Editor: [neovim](https://neovim.io/)
-- Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
-- Browser: [Safari](https://www.apple.com/lae/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/)
-- Launcher: [Raycast](https://www.raycast.com/)
-- Colorscheme: [gruvbox](https://github.com/morhetz/gruvbox) (via kitty & neovim theme)
+---
 
-## Structure
+## Overview
 
-```bash
+This repository contains a comprehensive collection of dotfiles and configuration files for various development tools and applications. The setup is designed to be:
+
+- **Modular** - Each tool's configuration is self-contained
+- **Maintainable** - Clear structure and documentation
+- **Portable** - Works across different machines with minimal adjustments
+- **Performant** - Optimized for speed and efficiency
+- **Aesthetic** - Consistent color scheme and visual design
+
+---
+
+## System Information
+
+| Component | Details |
+|-----------|---------|
+| **Operating System** | macOS Sequoia |
+| **Hardware** | Apple M1 Pro |
+| **Shell** | Zsh with Oh My Zsh |
+| **Editor** | Neovim (with NvChad configuration) |
+| **Terminal** | Kitty |
+| **Browser** | Safari, Firefox |
+| **Launcher** | Raycast |
+| **Color Scheme** | Gruvbox (via Kitty & Neovim theme) |
+
+---
+
+## Repository Structure
+
+```
 dotfiles/
-├── .config/                # XDG-compliant application configs
-│   ├── tmux/
-│   ├── kitty/
-│   └── ...
-├── nvchad-config/          # Neovim config (as a Git submodule), resources: mgastonportillo
-├── .gitmodules             # Submodule tracking file
-├── .zshrc / .bashrc        # Shell configs
-├── .gitconfig              # Git personal settings
-└── README.md               # This file
-````
-
-## Submodules
-
-This repository uses [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to manage large or external configs like Neovim.
-
-- `nvchad-config/` is a submodule pointing to [nvchad-config](https://github.com/mgastonportillo/nvchad-config.git)
-
-To clone the repo with submodules:
-
-```bash
-git clone --recurse-submodules https://github.com/tranlynhathao/dotfiles.git
+│
+├── .config/                    # XDG-compliant application configs
+│   ├── nvim/                  # Neovim configuration (submodule)
+│   ├── tmux/                  # Tmux configuration and plugins
+│   ├── kitty/                 # Kitty terminal configuration
+│   └── ...                    # Other application configs
+│
+├── nvchad-config/             # NvChad Neovim config (submodule)
+│
+├── zsh/                       # Zsh configuration files
+│   ├── zshrc/                # Modular zsh configuration
+│   │   ├── aliases.zsh
+│   │   ├── env.zsh
+│   │   ├── plugins.zsh
+│   │   └── ...
+│   └── .zshrc                # Main zsh configuration
+│
+├── vim/                       # Vim configuration files
+│   ├── vim_plugins.vim
+│   └── vim_programming.vim
+│
+├── bash/                      # Bash configuration
+│   └── .bashrc
+│
+├── flake.nix                  # Nix flake configuration
+├── flake.lock                 # Nix flake lock file
+├── Brewfile                   # Homebrew package list
+├── setup.sh                   # Setup script using GNU Stow
+├── fonts.sh                   # Font installation script
+└── README.md                  # This file
 ```
 
-If you’ve already cloned it:
+---
+
+## Quick Start
+
+<details>
+<summary><strong>Click to expand quick installation steps</strong></summary>
+
+```bash
+# 1. Clone the repository
+git clone --recurse-submodules https://github.com/tranlynhathao/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+
+# 2. Run setup script
+./setup.sh
+
+# 3. Install dependencies
+brew bundle
+./fonts.sh
+```
+
+</details>
+
+---
+
+## Installation Guide
+
+### Prerequisites
+
+Before setting up these dotfiles, ensure you have the following installed:
+
+| Requirement | Installation Command |
+|-------------|---------------------|
+| **Git** | Usually pre-installed on macOS |
+| **GNU Stow** | `brew install stow` |
+| **Zsh** | Default shell on macOS |
+| **Homebrew** | `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` |
+
+---
+
+### Step 1: Clone the Repository
+
+Clone this repository to your home directory with all submodules:
+
+```bash
+git clone --recurse-submodules https://github.com/tranlynhathao/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+```
+
+**If you've already cloned without submodules:**
 
 ```bash
 git submodule update --init --recursive
 ```
 
-## How to Use
+---
 
-### 1. Create symlinks
+### Step 2: Run the Setup Script
 
-You can link configs to the appropriate locations:
+The setup script uses GNU Stow to create symlinks for all configuration files:
 
 ```bash
-ln -s ~/dotfiles/.config ~/.config
-ln -s ~/dotfiles/nvim ~/.config/nvim
+./setup.sh
 ```
 
-> Alternatively, you can use a dotfile manager like [`stow`](https://www.gnu.org/software/stow/) or [`home-manager`](https://nix-community.github.io/home-manager/).
+**Alternative manual method:**
 
-### 2. Install dependencies
+```bash
+stow .
+```
 
-- Nerd Fonts: `FiraCode Nerd Font`, `VictorMono Nerd Font`
-- Terminal emulator: [Kitty](https://sw.kovidgoyal.net/kitty/)
-- Shell: [Fish](https://fishshell.com/) or [Zsh](https://www.zsh.org/)
-- Prompt: [Starship](https://starship.rs/)
+This will create symlinks from your home directory to the configuration files in this repository.
+
+---
+
+### Step 3: Install Dependencies
+
+#### Homebrew Packages
+
+Install all packages defined in the Brewfile:
+
+```bash
+brew bundle
+```
+
+This will install all applications, command-line tools, and dependencies listed in the `Brewfile`.
+
+#### Fonts
+
+Install required fonts for terminal and editor:
+
+```bash
+./fonts.sh
+```
+
+**Required fonts:**
+- FiraCode Nerd Font
+- VictorMono Nerd Font
+
+#### Shell Configuration
+
+If using Zsh with Oh My Zsh, follow the instructions in `zsh/README.md` to set up plugins and themes.
+
+---
+
+## Configuration Details
+
+### Git Submodules
+
+This repository uses Git submodules to manage external configurations and plugins:
+
+| Submodule | Purpose |
+|-----------|---------|
+| **Neovim Configuration** | NvChad-based configuration |
+| **Tmux Plugins** | Various tmux plugins for enhanced functionality |
+| **Base16 Shell** | Base16 color scheme support |
+
+**Update all submodules:**
+
+```bash
+git submodule update --remote --merge
+```
+
+**Remove a submodule (if needed):**
+
+```bash
+git submodule deinit -f <submodule-name>
+git rm -f <submodule-name>
+rm -rf .git/modules/<submodule-name>
+```
+
+---
 
 ## Tools & Technologies
 
-- [Neovim](https://neovim.io/) (with [NvChad](https://nvchad.com/))
-- [tmux](https://github.com/tmux/tmux)
-- [Kitty terminal](https://sw.kovidgoyal.net/kitty/)
-- [Fish shell](https://fishshell.com/) / [Zsh](https://www.zsh.org/)
-- [Starship prompt](https://starship.rs/)
+### Development Tools
 
-## Philosophy
+| Tool | Description |
+|------|-------------|
+| **Neovim** | Modern Vim fork with Lua-based configuration |
+| **Tmux** | Terminal multiplexer for managing multiple terminal sessions |
+| **Kitty** | GPU-accelerated terminal emulator |
+| **Git** | Version control system with custom configuration |
 
-Each tool is modularized and easy to maintain. This setup aims to be fast, aesthetic, and minimal while remaining highly customizable.
+### Shell and Terminal
 
-## Remove Submodule (if needed)
+| Tool | Description |
+|------|-------------|
+| **Zsh** | Interactive shell with Oh My Zsh framework |
+| **Starship** | Fast and customizable prompt for any shell |
+| **FZF** | Command-line fuzzy finder |
+| **Zoxide** | Smarter cd command |
+
+### Package Management
+
+| Tool | Description |
+|------|-------------|
+| **Homebrew** | macOS package manager |
+| **Nix** | Declarative package and system management (via flake.nix) |
+
+### Additional Tools
+
+| Tool | Description |
+|------|-------------|
+| **Raycast** | Application launcher and productivity tool |
+| **Various CLI tools** | See Brewfile for complete list |
+
+---
+
+## Customization
+
+### Adding New Configurations
+
+1. Create a new directory in the repository root
+2. Add your configuration files to that directory
+3. Run `stow <directory-name>` to create symlinks
+
+**Example:**
 
 ```bash
-git submodule deinit -f nvim
-git rm -f nvim
-rm -rf .git/modules/nvim
+mkdir myapp
+# Add config files to myapp/
+stow myapp
 ```
 
-## Feedback & Issues
+### Modifying Existing Configurations
 
-Feel free to fork, raise an issue, or reach out if you want to suggest improvements.
+Edit the configuration files directly in the repository. Changes will be reflected immediately since they are symlinked to your home directory.
+
+### Updating Packages
+
+To update the Brewfile with currently installed packages:
+
+```bash
+brew bundle dump --force
+```
+
+---
+
+## Maintenance
+
+### Updating Submodules
+
+Regularly update submodules to get the latest changes:
+
+```bash
+git submodule update --remote --merge
+```
+
+### Syncing Changes
+
+After making changes, commit and push:
+
+```bash
+git add .
+git commit -m "Update configuration"
+git push
+```
+
+### Backup Before Changes
+
+Always backup your current configuration before making major changes:
+
+```bash
+# Create a backup directory
+mkdir -p ~/dotfiles-backup
+
+# Backup specific configs
+cp ~/.zshrc ~/dotfiles-backup/
+cp -r ~/.config/nvim ~/dotfiles-backup/
+```
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+<details>
+<summary><strong>Symlink Issues</strong></summary>
+
+If symlinks are not created correctly, remove existing files and re-run stow:
+
+```bash
+# Remove conflicting files (be careful!)
+rm ~/.zshrc  # Example
+stow zsh
+```
+
+</details>
+
+<details>
+<summary><strong>Submodule Issues</strong></summary>
+
+If submodules are not initialized:
+
+```bash
+git submodule update --init --recursive
+```
+
+</details>
+
+<details>
+<summary><strong>Permission Issues</strong></summary>
+
+Ensure scripts are executable:
+
+```bash
+chmod +x setup.sh fonts.sh
+```
+
+</details>
+
+<details>
+<summary><strong>Homebrew Bundle Issues</strong></summary>
+
+If `brew bundle` fails, try:
+
+```bash
+brew bundle install
+```
+
+Or install missing dependencies manually:
+
+```bash
+brew install <package-name>
+```
+
+</details>
+
+---
+
+## Contributing
+
+While these are personal dotfiles, suggestions and improvements are welcome.
+
+**Ways to contribute:**
+- Open an issue for bugs or suggestions
+- Submit a pull request for improvements
+- Fork the repository for your own use
+
+---
 
 ## License
 
-[MIT License](https://github.com/tranlynhathao/dotfiles?tab=MIT-1-ov-file)
-<!-- [MIT License](./LICENSE) -->
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- **NvChad community** for the excellent Neovim configuration framework
+- **All developers** of the tools and plugins used in this setup
+- **The dotfiles community** for inspiration and best practices
+
+---
+
+<div align="center">
+
+**For questions or suggestions, please open an issue on GitHub.**
+
+Made with attention to detail
+
+</div>
