@@ -56,6 +56,7 @@ nvim/lazy-lock.json
 .openai.env
 
 DOC.md
+security.md
 
 # ignore rclone config
 rclone.conf
@@ -97,3 +98,8 @@ rclone.conf
 # SSH keys
 **/.ssh/id_*
 **/.ssh/*.pem
+
+# Machine-local app state (personal identifiers, session data, auto-generated IDs)
+.config/cursor/cli-config.json
+.config/gatsby/config.json
+.config/nushell/history.txt
