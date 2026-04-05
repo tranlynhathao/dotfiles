@@ -103,3 +103,7 @@ rclone.conf
 .config/cursor/cli-config.json
 .config/gatsby/config.json
 .config/nushell/history.txt
+
+# Claude Code local settings
+.claude/
+.config/.claude/
