@@ -1001,3 +1001,4 @@ $env.PATH = ($env.PATH | append '/Applications/Visual Studio Code.app/Contents/R
 
 use ~/.config/nushell/emsdk.nu *
 use ~/.config/starship/init.nu
+source $"($nu.home-path)/.cargo/env.nu"
