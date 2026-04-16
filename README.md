@@ -182,6 +182,7 @@ Install required fonts for terminal and editor:
 ```
 
 **Required fonts:**
+
 - FiraCode Nerd Font
 - VictorMono Nerd Font
 
@@ -383,6 +384,7 @@ brew install <package-name>
 While these are personal dotfiles, suggestions and improvements are welcome.
 
 **Ways to contribute:**
+
 - Open an issue for bugs or suggestions
 - Submit a pull request for improvements
 - Fork the repository for your own use
