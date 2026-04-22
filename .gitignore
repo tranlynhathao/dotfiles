@@ -1,6 +1,6 @@
 .DS_Store
 
-bash/.bash_history
+**/.bash_history
 bash/.bash_profile
 bash/.bashrc.save
 bash/.bashrc.savetab
@@ -24,10 +24,11 @@ zsh/.zprofile
 zsh/.zprofile.bak
 zsh/.zshrc.swp
 zsh/.zprofile.macports-saved_2023-11-01_at_21:16:53
-zsh/.zsh_history
+**/.zsh_history
 zsh/.zshrc-e
 
 backup_home_files/
+backup_files/
 
 .config/github-copilot/apps.json
 
@@ -103,6 +104,16 @@ rclone.conf
 .config/cursor/cli-config.json
 .config/gatsby/config.json
 .config/nushell/history.txt
+
+# History and backup artifacts
+**/.mysql_history
+**/.node_repl_history
+**/.psql_history
+**/.python_history
+**/.sqlite_history
+.config/micro/buffers/history
+.config/swi-prolog/dir-history/
+.config/znt/n-history.conf
 
 # Claude Code local settings
 .claude/
